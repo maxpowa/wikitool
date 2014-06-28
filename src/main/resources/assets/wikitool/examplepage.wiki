@@ -1,0 +1,95 @@
+{{cleanup}}
+The '''menu screen''' is comprised of the main menu as well as other menus displayed when ''Minecraft'' is paused. The menu screen is the interface that allows players to change options such as the game language and resource pack active, as well as create a new [[world]] or join a multiplayer server. Upon the opening of the game's menu, the game's logo will appear with a [[splash]] caption beneath it. The game's menu can be accessed anytime in-game by pausing the game, with the {{Key|Esc}} by default.
+
+By default, there are 5 buttons in the title screen menu: [[Singleplayer]], [[Multiplayer]], [[Options]], Quit Game and [[Language]]. There can also be a [[Minecraft Realms]] button if you meet certain criteria. In the background, there is a constantly moving, blurred image of a ''Minecraft'' world with distinguishable features. The map shown can be edited with the use of a resource pack.
+
+== Main menu buttons ==
+[[File:MainMenu.png|427px|thumb|center|Main menu of ''Minecraft'' with random [[splash]] text.]]
+
+
+{| class="wikitable" border="1" width="100%"
+|-
+! width="125px" | Option
+! Description
+|-
+| style="font-size: large; text-align: center;" | Singleplayer
+| Choose a world to play, or make one.
+|-
+| style="font-size: large; text-align: center;" | Multiplayer
+| Opens the multiplayer join screen.
+|-
+| style="font-size: large; text-align: center;" | [[File:LanguageButton.png|32px|link=Language]]
+| Allows you to set the game [[language]].
+|-
+| style="font-size: large; text-align: center;" | [[Options]]
+| Opens up a window where the player can change keyboard bindings, mouse, audio, and video options, and multiplayer options.
+|-
+| style="font-size: large; text-align: center;" | Quit Game
+| Closes the game.
+|}
+
+=== Pocket Edition ===
+[[File:MCPE_Screen.png|427px|thumb|center|Main menu of [[Pocket Edition]] with random splash text as it appeared in [[Pocket Edition version history#Alpha|Alpha]] 0.7.3 - 0.7.5.]]
+
+
+{| class="wikitable" border="1" width="100%"
+|-
+! width="125px" | Option
+! Description
+|-
+| style="font-size: large; text-align: center;" | Play
+| Choose a world to play, or make one.
+|-
+| style="font-size: large; text-align: center;" | Play on Realms
+| Allows one to play using Realms (only appears if invited to Realms)
+|-
+| style="font-size: large; text-align: center;" | [[File:Pocket Edition Options.jpg|32px|link=Options#Pocket Edition]]
+| Opens Options menu
+|}
+
+== Singleplayer Menu Screen ==
+
+The singleplayer menu screen is a menu screen that appears when you click singleplayer.  It is where you can create or delete or recreate your worlds.  If you already made a world you could select it in there.  Many people who started minecraft up go in this menu screen right away.  The singleplayer menu screen consists of these options: New World, Delete world, Recreate world and play world.
+
+== Multiplayer Menu Screen ==
+
+The Multiplayer menu screen is a menu screen in Minecraft that allows you to play online with fellow players. You can join an available online server, create your own, or use direct connect to join any server using it's server address. The Multiplayer Menu consists of the options: Join Server, Direct Connect, Add Server, Edit, Delete, Refresh, and Cancel. When adding a server, you must give the server a name and it's server address. There's also the option of if you want to hide your server address or not.
+
+== Minceraft ==
+
+There is a one in 10,000 chance that the title screen will display "Minceraft" instead of "Minecraft".
+[[Notch]] made it as a small secret, and enjoyed that he was the only one who knew of its existence. After stating a secret was in Minecraft undiscovered, the Internet went wild, trying to find it. Soon after, Notch wrote an article called "A Post-Mortem of Minceraft".
+
+In crash logs, a reference to Minceraft may appear as a joke, stating "You should try our sister game, Minceraft!".
+
+[[File:MenuScreenMinceraft.png|427px|thumb|center|Screen with Minceraft on it with a random [[splash]].]]
+
+== History ==
+
+{{History|Indev}}
+{{History||unknown|Originally the main menu displayed a pattern of the [[dirt]] block texture (texture packs could however use a different texture).}}
+{{History|b}}
+{{History||1.8|Completely revamped the title screen adding an animated background, a version tag in the bottom left corner and new options in the option menu.}}
+{{History||1.9|Minceraft easter egg added.}}
+{{History|r}}
+{{History||1.1|Added language select button.}}
+{{History||12w37a|Added "Re-Create" option to the World selection menu.}}
+{{History||13w03a|The "Texture Packs" button has been moved to the "Options..." screen.}}
+{{History||13w09a|The "Minecraft [[Realms]]" button is moved to the main screen, taking the spot of the "Texture Packs" button.}}
+{{History||1.7.2|rowspan=2|snap=November 15, 2013|slink=https://twitter.com/Dinnerbone/status/401461231284129792|Added menu music.}}
+{{History|foot}}
+
+== Gallery ==
+<gallery>
+File:MenuScreenEarlyAlpha.png| The menu screen in early [[Alpha]].
+File:MenuScreenBeta173.png| The menu screen in [[Beta]] 1.7.3.
+File:Menu screen Realms.png| The menu screen when the user has access to Minecraft Realms.
+File:McPeMenu.png| The Pocket Edition menu screen before 0.7.0 Alpha.
+File:McPeMenuiOS.jpg| The Pocket Edition menu screen in 0.7.0-0.7.2 Alpha.
+File:0.7.6Amenuscreen.jpg| The current Pocket Edition Menu screen.
+File:MenuScreenMinceraft.png|The Menu Screen with the title of 'Minceraft'.</gallery>
+
+{{Minecraft}}
+
+[[Category:Minecraft]]
+[[Category:Gameplay]]
