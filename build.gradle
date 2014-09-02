@@ -21,6 +21,10 @@ version = "1.0"
 group= "com.github.maxpowa" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "wikitool"
 
+dependencies {
+    compile 'org.sweble.wikitext:swc-parser-lazy:1.1.0'
+}
+
 minecraft {
     version = "1.7.2-10.12.1.1072"
     assetDir = "eclipse/assets"
@@ -45,12 +49,8 @@ processResources
         exclude 'mcmod.info'
     }
     
-    from {configurations.packageLibs.collect {zipTree(it)}}
+    from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
 }
-
-configurations { packageLibs }
-
-dependencies { packageLibs 'org.sweble.wikitext:swc-parser-lazy:1.1.0' }
 
 task deobfJar(type: Jar) {
     from sourceSets.main.output
