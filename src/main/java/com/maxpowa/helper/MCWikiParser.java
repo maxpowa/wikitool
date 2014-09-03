@@ -17,6 +17,7 @@ public class MCWikiParser extends ArticleParser {
             input = input.replaceFirst("''", "\u00a7r");
             i++;
         }
+        
         Matcher m = Pattern.compile("(\\{\\|(?:.|\\n)*?\\|\\})", Pattern.DOTALL | Pattern.MULTILINE).matcher(input);
         
         for (int t = 0; t < 10 && m.find(); t++) {

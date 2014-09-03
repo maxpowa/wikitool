@@ -1,0 +1,2 @@
+wikitool.inline.link=[{"text":"%s","clickEvent":{"action":"open_url","value":"%s"},"hoverEvent":{"action":"show_text","value":{"text":"%s"}}}]
+wikitool.inline.meta=[{"text":"%s","clickEvent":{"action":"open_url","value":"%s"},"hoverEvent":{"action":"show_text","value":{"text":"%s"}}}]

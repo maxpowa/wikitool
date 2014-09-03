@@ -1,12 +1,8 @@
 package com.maxpowa.ui;
 
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.GuiButton;
-import net.minecraft.client.gui.GuiCreateWorld;
-import net.minecraft.client.gui.inventory.GuiChest;
 import net.minecraft.client.gui.inventory.GuiDispenser;
-import net.minecraft.inventory.InventoryEnderChest;
 import net.minecraft.tileentity.TileEntityDropper;
 import net.minecraft.util.ResourceLocation;
 
