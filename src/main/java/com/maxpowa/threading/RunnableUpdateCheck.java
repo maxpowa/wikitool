@@ -1,6 +1,5 @@
 package com.maxpowa.threading;
 
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.net.URL;
@@ -30,7 +29,7 @@ public class RunnableUpdateCheck implements Runnable {
                 URL url = new URL(json.getAsJsonObject().get("download").getAsString());
                 // do update-y things
             }
-        } catch (IOException ex) {
+        } catch (Exception ex) {
             ex.printStackTrace(System.err);
         }
     }    

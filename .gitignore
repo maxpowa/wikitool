@@ -23,7 +23,8 @@ hs_err_pid*
 .LSOverride
 
 # Icon must ends with two \r.
-Icon
+Icon
+
 
 # Thumbnails
 ._*
@@ -78,3 +79,6 @@ local.properties
 # PDT-specific
 .buildpath
 /run/
+config/
+logs/
+options.txt
