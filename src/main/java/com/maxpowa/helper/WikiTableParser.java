@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import com.maxpowa.WikiTool;
 
+@Deprecated
 public class WikiTableParser {
     
     private String name;

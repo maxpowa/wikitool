@@ -36,6 +36,7 @@ import org.sweble.wikitext.lazy.parser.TableCaption;
 import org.sweble.wikitext.lazy.parser.TableCell;
 import org.sweble.wikitext.lazy.parser.TableHeader;
 import org.sweble.wikitext.lazy.parser.TableRow;
+import org.sweble.wikitext.lazy.parser.Ticks;
 import org.sweble.wikitext.lazy.parser.Url;
 import org.sweble.wikitext.lazy.parser.Whitespace;
 import org.sweble.wikitext.lazy.parser.XmlElement;
@@ -53,17 +54,18 @@ import org.sweble.wikitext.lazy.utils.XmlAttributeGarbage;
 import org.sweble.wikitext.lazy.utils.XmlCharRef;
 import org.sweble.wikitext.lazy.utils.XmlEntityRef;
 
+import com.maxpowa.WikiTool;
+
 import de.fau.cs.osr.ptk.common.AstVisitor;
 import de.fau.cs.osr.ptk.common.ast.AstNode;
-import de.fau.cs.osr.ptk.common.ast.ContentNode;
 import de.fau.cs.osr.ptk.common.ast.NodeList;
 import de.fau.cs.osr.ptk.common.ast.Text;
 import de.fau.cs.osr.utils.StringUtils;
 
 public class ChatComponentPrinter extends AstVisitor
 {
-	private IChatComponent out;
-	private ChatStyle currentStyle;
+	private IChatComponent out = new ChatComponentText("");
+	private ChatStyle currentStyle = new ChatStyle();
 	
 	private Stack<String> indent = new Stack<String>();
 	
@@ -81,7 +83,7 @@ public class ChatComponentPrinter extends AstVisitor
 	
 	protected void incIndent(String inc)
 	{
-		indent.push(indent.peek() + inc);
+		indent.push(indent.peek() + inc.replace("\t", "    "));
 	}
 	
 	protected void decIndent()
@@ -117,8 +119,8 @@ public class ChatComponentPrinter extends AstVisitor
 			needIndent = false;
 		}
 		
-		if (text.getChatStyle() == null)
-			text.setChatStyle(currentStyle.createDeepCopy());
+		//if (text.getChatStyle() == null)
+		text.setChatStyle(currentStyle.createDeepCopy());
 		
 		out.appendSibling(text);
 	}
@@ -170,16 +172,6 @@ public class ChatComponentPrinter extends AstVisitor
 		return StringUtils.startWithUppercase(name);
 	}
 	
-	protected static String escHtml(String text)
-	{
-		return StringUtils.escHtml(text);
-	}
-	
-	protected static String escJavaHtml(String text)
-	{
-		return StringUtils.escHtml(StringUtils.escJava(text));
-	}
-	
 	protected static String strrep(char ch, int rep)
 	{
 		return StringUtils.strrep(ch, rep);
@@ -193,68 +185,35 @@ public class ChatComponentPrinter extends AstVisitor
 	////// End basic printer methods
 	
 	private String classPrefix;
-	private String articleTitle = "";
+	//private String articleTitle = "";
 
 	private boolean renderTemplates = false;
-
-	private boolean renderTagExtensions = false;
 
 	private List<ExternalLink> numberedLinks = new ArrayList();
 
 	public static IChatComponent print(AstNode node, String articleTitle) {
-		ChatComponentText sb = new ChatComponentText("");
-		new ChatComponentPrinter(sb, articleTitle).go(node);
-		return sb;
+		return print(new ChatComponentText(""), node, articleTitle);
 	}
 
 	public static IChatComponent print(ChatComponentText sb, AstNode node, String articleTitle) {
-		new ChatComponentPrinter(sb, articleTitle).go(node);
+		new ChatComponentPrinter(sb, articleTitle).go(node.get(0));
 		return sb;
 	}
 
 	public void visit(AstNode astNode) throws IOException {
-		print("<span class=\"");
-		print(this.classPrefix);
-		print("unknown-node\">");
-		print(astNode.getClass().getSimpleName());
-		print("</span>");
+//		print("<span class=\"");
+//		print(this.classPrefix);
+//		print("unknown-node\">");
+//		print(astNode.getClass().getSimpleName());
+//		print("</span>");
 	}
 
 	public void visit(NodeList l) throws IOException {
 		iterate(l);
 	}
 
-	public void visit(Page page) throws IOException {
-		printNewline(false);
-		print("<div class=\"");
-		print(this.classPrefix);
-		print("content\">");
-		printNewline(true);
-		print("\t<h1 class=\"");
-		print(this.classPrefix);
-		print("article-heading\">");
-		print(escHtml(this.articleTitle));
-		print("</h1>");
-		printNewline(true);
-		print("\t<div class=\"");
-		print(this.classPrefix);
-		print("article-content\">");
-		printNewline(false);
-		incIndent("\t\t");
-		iterate(page.getContent());
-		decIndent();
-		printNewline(false);
-		print("\t</div>");
-		printNewline(true);
-		print("</div>");
-		printNewline(true);
-		print("</div>");
-		printNewline(false);
-		printNewline(false);
-	}
-
 	public void visit(Text text) throws IOException {
-		print(escHtml(text.getContent()));
+		print(text.getContent());
 	}
 
 	public void visit(Italics n) throws IOException {
@@ -266,6 +225,17 @@ public class ChatComponentPrinter extends AstVisitor
 			currentStyle.setItalic(true);
 		
 		iterate(n.getContent());
+		
+		currentStyle = style;
+	}
+	
+	public void visit(Ticks t) throws IOException {
+		ChatStyle style = currentStyle.createDeepCopy();
+		
+		if (currentStyle.getBold())
+			currentStyle.setBold(false);
+		else
+			currentStyle.setBold(true);
 		
 		currentStyle = style;
 	}
@@ -465,17 +435,26 @@ public class ChatComponentPrinter extends AstVisitor
 	}
 
 	public void visit(InternalLink n) throws IOException {
-		print("<a href=\"");
+		ChatStyle tempStyle = currentStyle.createDeepCopy();
+		
+		currentStyle.setChatClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, makeLinkTarget(n)));
+		currentStyle.setChatHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ChatComponentText("Wiki Link: "+n.getTitle())));
+		
 		print(makeLinkTarget(n));
-		print("\">");
-		print(n.getPrefix());
-		if (n.getTitle().getContent().isEmpty())
-			print(makeLinkTitle(n));
-		else {
-			iterate(n.getTitle().getContent());
-		}
-		print(n.getPostfix());
-		print("</a>");
+		
+		currentStyle = tempStyle;
+		
+//		print("<a href=\"");
+//		print(makeLinkTarget(n));
+//		print("\">");
+//		print(n.getPrefix());
+//		if (n.getTitle().getContent().isEmpty())
+//			print(makeLinkTitle(n));
+//		else {
+//			iterate(n.getTitle().getContent());
+//		}
+//		print(n.getPostfix());
+//		print("</a>");
 	}
 
 	public void visit(Table table) throws IOException {
@@ -592,81 +571,83 @@ public class ChatComponentPrinter extends AstVisitor
 	}
 
 	public void visit(TagExtension n) throws IOException {
-		print("<span class=\"");
-		print(this.classPrefix);
-		print("unknown-node\">");
-		if (this.renderTagExtensions) {
-			if (n.getBody().isEmpty()) {
-				print("&lt;");
-				print(n.getName());
-				iterate(n.getXmlAttributes());
-				print(" />");
-			} else {
-				print("&lt;");
-				print(n.getName());
-				iterate(n.getXmlAttributes());
-				print(">");
-				print(escHtml(n.getBody()));
-				print("&lt;/");
-				print(n.getName());
-				print(">");
-			}
-		} else {
-			if (n.getXmlAttributes().isEmpty()) {
-				print("&lt;");
-				print(n.getName());
-			} else {
-				print("&lt;");
-				print(n.getName());
-				print(" ...");
-			}
-			if (n.getBody().isEmpty()) {
-				print("/>");
-			} else {
-				print(">...&lt;/");
-				print(n.getName());
-				print(">");
-			}
-		}
-		print("</span>");
+//		print("<span class=\"");
+//		print(this.classPrefix);
+//		print("unknown-node\">");
+//		if (this.renderTagExtensions) {
+//			if (n.getBody().isEmpty()) {
+//				print("&lt;");
+//				print(n.getName());
+//				iterate(n.getXmlAttributes());
+//				print(" />");
+//			} else {
+//				print("&lt;");
+//				print(n.getName());
+//				iterate(n.getXmlAttributes());
+//				print(">");
+//				print(n.getBody());
+//				print("&lt;/");
+//				print(n.getName());
+//				print(">");
+//			}
+//		} else {
+//			if (n.getXmlAttributes().isEmpty()) {
+//				print("&lt;");
+//				print(n.getName());
+//			} else {
+//				print("&lt;");
+//				print(n.getName());
+//				print(" ...");
+//			}
+//			if (n.getBody().isEmpty()) {
+//				print("/>");
+//			} else {
+//				print(">...&lt;/");
+//				print(n.getName());
+//				print(">");
+//			}
+//		}
+//		print("</span>");
+		
+		print(n.getBody());
 	}
 
 	public void visit(XmlElementEmpty e) throws IOException {
-		print("<span class=\"");
-		print(this.classPrefix);
-		print("unknown-node\">");
-		print("&lt;");
-		print(e.getName());
-		iterate(e.getXmlAttributes());
-		print(" />");
-		print("</span>");
+//		print("<span class=\"");
+//		print(this.classPrefix);
+//		print("unknown-node\">");
+//		print("&lt;");
+//		print(e.getName());
+//		iterate(e.getXmlAttributes());
+//		print(" />");
+//		print("</span>");
 	}
 
 	public void visit(XmlElementOpen e) throws IOException {
-		print("<span class=\"");
-		print(this.classPrefix);
-		print("unknown-node\">");
-		print("&lt;");
-		print(e.getName());
-		iterate(e.getXmlAttributes());
-		print(">");
-		print("</span>");
+//		print("<span class=\"");
+//		print(this.classPrefix);
+//		print("unknown-node\">");
+//		print("&lt;");
+//		print(e.getName());
+//		iterate(e.getXmlAttributes());
+//		print(">");
+//		print("</span>");
 	}
 
 	public void visit(XmlElementClose e) throws IOException {
-		print("<span class=\"");
-		print(this.classPrefix);
-		print("unknown-node\">");
-		print("&lt;/");
-		print(e.getName());
-		print(">");
-		print("</span>");
+//		print("<span class=\"");
+//		print(this.classPrefix);
+//		print("unknown-node\">");
+//		print("&lt;/");
+//		print(e.getName());
+//		print(">");
+//		print("</span>");
 	}
 
 	public void visit(Template tmpl) throws IOException {
-		print("<span class=\"");
-		print(this.classPrefix);
-		print("unknown-node\">");
+//		print("<span class=\"");
+//		print(this.classPrefix);
+//		print("unknown-node\">");
 		if (this.renderTemplates) {
 			print("{");
 			print("{");
@@ -685,13 +666,13 @@ public class ChatComponentPrinter extends AstVisitor
 			print("|...}}");
 		}
 
-		print("</span>");
+//		print("</span>");
 	}
 
 	public void visit(TemplateParameter param) throws IOException {
-		print("<span class=\"");
-		print(this.classPrefix);
-		print("unknown-node\">");
+//		print("<span class=\"");
+//		print(this.classPrefix);
+//		print("unknown-node\">");
 		if (this.renderTemplates) {
 			print("{");
 			print("{");
@@ -714,7 +695,7 @@ public class ChatComponentPrinter extends AstVisitor
 			print("|...}}}");
 		}
 
-		print("</span>");
+//		print("</span>");
 	}
 
 	public void visit(TemplateArgument arg) throws IOException {
@@ -733,7 +714,7 @@ public class ChatComponentPrinter extends AstVisitor
 		this.currentStyle = sb.getChatStyle();
 		this.indent.push("");
 		
-		this.articleTitle = articleTitle;
+		//this.articleTitle = articleTitle;
 	}
 
 	protected void setClassPrefix(String classPrefix) {
@@ -747,10 +728,6 @@ public class ChatComponentPrinter extends AstVisitor
 
 	public void setRenderTemplates(boolean renderTemplates) {
 		this.renderTemplates = renderTemplates;
-	}
-
-	public void setRenderTagExtensions(boolean renderTagExtensions) {
-		this.renderTagExtensions = renderTagExtensions;
 	}
 
 	private String asXmlCharRefs(String codePoint) {
@@ -797,16 +774,5 @@ public class ChatComponentPrinter extends AstVisitor
 
 	private String makeSignature(Signature sig) {
 		return "[SIG]";
-	}
-	
-	public class Page extends ContentNode {
-		private static final long serialVersionUID = 1L;
-
-		public Page() {
-		}
-
-		public Page(NodeList content) {
-			super(content);
-		}
 	}
 }

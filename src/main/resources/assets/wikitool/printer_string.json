@@ -1,0 +1,4790 @@
+{
+  "clickEvent": {
+    "action": "run_command",
+    "value": "world"
+  },
+  "hoverEvent": {
+    "action": "show_text",
+    "value": "Wiki Link"
+  },
+  "extra": [
+    "",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "{{cleanup}}"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "The menu screen comprises all of the buttons and text for both the main menu and the pause menu.  It is the interface that allows players to change options such as the game language and resource pack active, as well as create a new "
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "clickEvent": {
+        "action": "run_command",
+        "value": "world"
+      },
+      "hoverEvent": {
+        "action": "show_text",
+        "value": "Wiki Link"
+      },
+      "text": "world"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " or join a multiplayer server. Upon the opening of the game's menu, the game's logo will appear with a "
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "clickEvent": {
+        "action": "run_command",
+        "value": "splash"
+      },
+      "hoverEvent": {
+        "action": "show_text",
+        "value": "Wiki Link"
+      },
+      "text": "splash"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " caption beneath it. The game's menu can be accessed anytime in-game by pausing the game, with the {{Key"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "Esc}} by default."
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "By default, there are 6 buttons in the title screen menu"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ":"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " "
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "clickEvent": {
+        "action": "run_command",
+        "value": "Singleplayer"
+      },
+      "hoverEvent": {
+        "action": "show_text",
+        "value": "Wiki Link"
+      },
+      "text": "Singleplayer"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ", "
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "clickEvent": {
+        "action": "run_command",
+        "value": "Multiplayer"
+      },
+      "hoverEvent": {
+        "action": "show_text",
+        "value": "Wiki Link"
+      },
+      "text": "Multiplayer"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ", "
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "clickEvent": {
+        "action": "run_command",
+        "value": "Realms"
+      },
+      "hoverEvent": {
+        "action": "show_text",
+        "value": "Wiki Link"
+      },
+      "text": "Realms"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ", "
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "clickEvent": {
+        "action": "run_command",
+        "value": "Options"
+      },
+      "hoverEvent": {
+        "action": "show_text",
+        "value": "Wiki Link"
+      },
+      "text": "Options"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ", Quit Game and "
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "clickEvent": {
+        "action": "run_command",
+        "value": "Language"
+      },
+      "hoverEvent": {
+        "action": "show_text",
+        "value": "Wiki Link"
+      },
+      "text": "Language"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ".  In the background, there is a constantly moving, blurred image of a "
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "Minecraft"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " world with distinguishable features. The map shown can be edited with the use of a resource pack."
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "{{-}}"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    "\n",
+    "",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<div class=\""
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "section\">"
+    },
+    "\n",
+    "",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\t<h"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "2"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ">"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "Main Menu Buttons"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<\/h"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "2"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ">"
+    },
+    "\n",
+    "",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\t<div class=\""
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "section-body\">"
+    },
+    "\n",
+    "        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "NOTE"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ":"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " A more in-depth tutorial is currenty being made, and can be accessed "
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "clickEvent": {
+        "action": "run_command",
+        "value": "Tutorials\/Menu screen"
+      },
+      "hoverEvent": {
+        "action": "show_text",
+        "value": "Wiki Link"
+      },
+      "text": "Tutorials\/Menu screen"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "."
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    "\n",
+    "        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<div class=\""
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "section\">"
+    },
+    "\n",
+    "        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\t<h"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "3"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ">"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "PC Minecraft"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<\/h"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "3"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ">"
+    },
+    "\n",
+    "        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\t<div class=\""
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "section-body\">"
+    },
+    "\n",
+    "                ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    "\n",
+    "                ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<table"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " "
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "class"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "=\""
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "wikitable"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\""
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ">"
+    },
+    "\n",
+    "                    ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<tr"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ">"
+    },
+    "\n",
+    "                        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<th"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " "
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "width"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "=\""
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "175px"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\""
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ">"
+    },
+    "\n",
+    "                            ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " Option"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    "\n",
+    "                        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<\/th>"
+    },
+    "\n",
+    "                        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<th"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ">"
+    },
+    "\n",
+    "                            ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " Description"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    "\n",
+    "                        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<\/th>"
+    },
+    "\n",
+    "                    ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<\/tr>"
+    },
+    "\n",
+    "                    ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<tr"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ">"
+    },
+    "\n",
+    "                        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<td"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " "
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "style"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "=\""
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "font-size: large; text-align: center;"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\""
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ">"
+    },
+    "\n",
+    "                            ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " "
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "clickEvent": {
+        "action": "run_command",
+        "value": "Singleplayer"
+      },
+      "hoverEvent": {
+        "action": "show_text",
+        "value": "Wiki Link"
+      },
+      "text": "Singleplayer"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    "\n",
+    "                        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<\/td>"
+    },
+    "\n",
+    "                        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<td"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ">"
+    },
+    "\n",
+    "                            ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " Choose a world to play, or make one."
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    "\n",
+    "                        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<\/td>"
+    },
+    "\n",
+    "                    ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<\/tr>"
+    },
+    "\n",
+    "                    ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<tr"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ">"
+    },
+    "\n",
+    "                        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<td"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " "
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "style"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "=\""
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "font-size: large; text-align: center;"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\""
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ">"
+    },
+    "\n",
+    "                            ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " "
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "clickEvent": {
+        "action": "run_command",
+        "value": "Multiplayer"
+      },
+      "hoverEvent": {
+        "action": "show_text",
+        "value": "Wiki Link"
+      },
+      "text": "Multiplayer"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    "\n",
+    "                        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<\/td>"
+    },
+    "\n",
+    "                        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<td"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ">"
+    },
+    "\n",
+    "                            ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " Opens the multiplayer join screen."
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    "\n",
+    "                        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<\/td>"
+    },
+    "\n",
+    "                    ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<\/tr>"
+    },
+    "\n",
+    "                    ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<tr"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ">"
+    },
+    "\n",
+    "                        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<td"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " "
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "style"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "=\""
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "font-size: large; text-align: center;"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\""
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ">"
+    },
+    "\n",
+    "                            ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " "
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "clickEvent": {
+        "action": "run_command",
+        "value": "Realms"
+      },
+      "hoverEvent": {
+        "action": "show_text",
+        "value": "Wiki Link"
+      },
+      "text": "Realms"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    "\n",
+    "                        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<\/td>"
+    },
+    "\n",
+    "                        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<td"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ">"
+    },
+    "\n",
+    "                            ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " Opens the main "
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "Minecraft Realms"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " menu."
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    "\n",
+    "                        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<\/td>"
+    },
+    "\n",
+    "                    ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<\/tr>"
+    },
+    "\n",
+    "                    ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<tr"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ">"
+    },
+    "\n",
+    "                        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<td"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " "
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "style"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "=\""
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "font-size: large; text-align: center;"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\""
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ">"
+    },
+    "\n",
+    "                            ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " "
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    "\n",
+    "                        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<\/td>"
+    },
+    "\n",
+    "                        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<td"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ">"
+    },
+    "\n",
+    "                            ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " Allows you to set the game "
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "clickEvent": {
+        "action": "run_command",
+        "value": "language"
+      },
+      "hoverEvent": {
+        "action": "show_text",
+        "value": "Wiki Link"
+      },
+      "text": "language"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "."
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    "\n",
+    "                        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<\/td>"
+    },
+    "\n",
+    "                    ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<\/tr>"
+    },
+    "\n",
+    "                    ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<tr"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ">"
+    },
+    "\n",
+    "                        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<td"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " "
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "style"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "=\""
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "font-size: large; text-align: center;"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\""
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ">"
+    },
+    "\n",
+    "                            ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " "
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "clickEvent": {
+        "action": "run_command",
+        "value": "Options"
+      },
+      "hoverEvent": {
+        "action": "show_text",
+        "value": "Wiki Link"
+      },
+      "text": "Options"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    "\n",
+    "                        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<\/td>"
+    },
+    "\n",
+    "                        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<td"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ">"
+    },
+    "\n",
+    "                            ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " Opens the main "
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "Options"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " menu."
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    "\n",
+    "                        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<\/td>"
+    },
+    "\n",
+    "                    ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<\/tr>"
+    },
+    "\n",
+    "                    ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<tr"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ">"
+    },
+    "\n",
+    "                        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<td"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " "
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "style"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "=\""
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "font-size: large; text-align: center;"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\""
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ">"
+    },
+    "\n",
+    "                            ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " Quit Game"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    "\n",
+    "                        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<\/td>"
+    },
+    "\n",
+    "                        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<td"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ">"
+    },
+    "\n",
+    "                            ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " Closes the game."
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    "\n",
+    "                        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<\/td>"
+    },
+    "\n",
+    "                    ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<\/tr>"
+    },
+    "\n",
+    "\n",
+    "                ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<\/table>"
+    },
+    "\n",
+    "                ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    "\n",
+    "        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\t<\/div>"
+    },
+    "\n",
+    "        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<\/div>"
+    },
+    "\n",
+    "        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<div class=\""
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "section\">"
+    },
+    "\n",
+    "        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\t<h"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "3"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ">"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "Pocket Edition"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<\/h"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "3"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ">"
+    },
+    "\n",
+    "        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\t<div class=\""
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "section-body\">"
+    },
+    "\n",
+    "                ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    "\n",
+    "                ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<table"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " "
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "class"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "=\""
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "wikitable"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\""
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ">"
+    },
+    "\n",
+    "                    ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<tr"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ">"
+    },
+    "\n",
+    "                        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<th"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " "
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "width"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "=\""
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "125px"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\""
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ">"
+    },
+    "\n",
+    "                            ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " Option"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    "\n",
+    "                        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<\/th>"
+    },
+    "\n",
+    "                        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<th"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ">"
+    },
+    "\n",
+    "                            ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " Description"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    "\n",
+    "                        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<\/th>"
+    },
+    "\n",
+    "                    ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<\/tr>"
+    },
+    "\n",
+    "                    ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<tr"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ">"
+    },
+    "\n",
+    "                        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<td"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " "
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "style"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "=\""
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "font-size: large; text-align: center;"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\""
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ">"
+    },
+    "\n",
+    "                            ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " Play"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    "\n",
+    "                        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<\/td>"
+    },
+    "\n",
+    "                        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<td"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ">"
+    },
+    "\n",
+    "                            ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " Choose a world to play, or make one."
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    "\n",
+    "                        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<\/td>"
+    },
+    "\n",
+    "                    ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<\/tr>"
+    },
+    "\n",
+    "                    ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<tr"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ">"
+    },
+    "\n",
+    "                        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<td"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " "
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "style"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "=\""
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "font-size: large; text-align: center;"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\""
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ">"
+    },
+    "\n",
+    "                            ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " "
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    "\n",
+    "                        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<\/td>"
+    },
+    "\n",
+    "                        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<td"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ">"
+    },
+    "\n",
+    "                            ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " Opens Options menu"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    "\n",
+    "                        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<\/td>"
+    },
+    "\n",
+    "                    ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<\/tr>"
+    },
+    "\n",
+    "\n",
+    "                ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<\/table>"
+    },
+    "\n",
+    "                ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "{{-}}"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    "\n",
+    "        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\t<\/div>"
+    },
+    "\n",
+    "        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<\/div>"
+    },
+    "\n",
+    "",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\t<\/div>"
+    },
+    "\n",
+    "",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<\/div>"
+    },
+    "\n",
+    "",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<div class=\""
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "section\">"
+    },
+    "\n",
+    "",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\t<h"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "2"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ">"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " Minceraft "
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<\/h"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "2"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ">"
+    },
+    "\n",
+    "",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\t<div class=\""
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "section-body\">"
+    },
+    "\n",
+    "        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "There is a one in 10,000 chance that the title screen will display \"Minceraft\" instead of \"Minecraft\"."
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "clickEvent": {
+        "action": "run_command",
+        "value": "Notch"
+      },
+      "hoverEvent": {
+        "action": "show_text",
+        "value": "Wiki Link"
+      },
+      "text": "Notch"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " made it as a small secret, and enjoyed that he was the only one who knew of its existence. After stating a secret was in Minecraft undiscovered, the internet went wild, trying to find it. Soon after, Notch wrote an article called, "
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "clickEvent": {
+        "action": "open_url",
+        "value": "http:\/\/www.reddit.com\/r\/Minecraft\/comments\/qqenq\/minceraft_a_post_mortem\/"
+      },
+      "hoverEvent": {
+        "action": "show_text",
+        "value": "External Link: http:\/\/www.reddit.com\/r\/Minecraft\/comments\/qqenq\/minceraft_a_post_mortem\/"
+      },
+      "text": "\"A Post-Mortem of Minceraft\""
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "."
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "In crash logs, a reference to Minceraft may appear as a joke, stating, \"You should try our sister game, Minceraft"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "!"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\"."
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "{{-}}"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    "\n",
+    "",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\t<\/div>"
+    },
+    "\n",
+    "",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<\/div>"
+    },
+    "\n",
+    "",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<div class=\""
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "section\">"
+    },
+    "\n",
+    "",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\t<h"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "2"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ">"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " History "
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<\/h"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "2"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ">"
+    },
+    "\n",
+    "",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\t<div class=\""
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "section-body\">"
+    },
+    "\n",
+    "        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "{{History"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "in}}"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "{{History"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "January 31, 2010"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "The menu screen was added. It originally displayed a dirt background.}}"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "{{History"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "a}}"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "{{History"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "unknown"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "Added animation of the logo. The animation was cobblestone zooming out in order to form the word \"Minecraft\".}}"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "{{History"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "b}}"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "{{History"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "1.0"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "Removed the \"Play tutorial level\" button.}}"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "{{History"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "1.4"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "Minecraft logo now is "
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " instead of "
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "The logo animation was removed as such.}}"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "{{History"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "1.8"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "Completely revamped the title screen adding an animated background, a version tag in the bottom left corner and new options in the option menu.}}"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "{{History"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "r}}"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "{{History"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "1.0.0"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "Minceraft easter egg added.}}"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "{{History"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "1.1"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "Added language select button.}}"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "{{History"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "1.4.2"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "snap"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "="
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "12w37a"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "Added \"Re-Create\" option to the World selection menu.}}"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "{{History"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "1.5"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "snap"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "="
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "13w03a"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "The \"Texture Packs\" button has been moved to the \"Options...\" screen.}}"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "{{History"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "snap"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "="
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "13w09a"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "The \"Minecraft "
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "clickEvent": {
+        "action": "run_command",
+        "value": "Realms"
+      },
+      "hoverEvent": {
+        "action": "show_text",
+        "value": "Wiki Link"
+      },
+      "text": "Realms"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\" button is moved to the main screen, taking the spot of the \"Texture Packs\" button.}}"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "{{History"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "1.7.2"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "snap"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "="
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "November 15, 2013"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "slink"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "="
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "clickEvent": {
+        "action": "open_url",
+        "value": "https:\/\/twitter.com\/Dinnerbone\/status\/401461231284129792"
+      },
+      "hoverEvent": {
+        "action": "show_text",
+        "value": "External Link"
+      },
+      "text": "https:\/\/twitter.com\/Dinnerbone\/status\/401461231284129792"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "Added menu music.}}"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "{{History"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "foot}}"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    "\n",
+    "",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\t<\/div>"
+    },
+    "\n",
+    "",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<\/div>"
+    },
+    "\n",
+    "",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<div class=\""
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "section\">"
+    },
+    "\n",
+    "",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\t<h"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "2"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ">"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " Gallery "
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<\/h"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "2"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ">"
+    },
+    "\n",
+    "",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\t<div class=\""
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "section-body\">"
+    },
+    "\n",
+    "        ",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "File"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ":"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "MenuScreenEarlyAlpha.png"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " The menu screen in early "
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "clickEvent": {
+        "action": "run_command",
+        "value": "Alpha"
+      },
+      "hoverEvent": {
+        "action": "show_text",
+        "value": "Wiki Link"
+      },
+      "text": "Alpha"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "."
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "File"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ":"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "MenuScreenBeta173.png"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " The menu screen in "
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "clickEvent": {
+        "action": "run_command",
+        "value": "Beta"
+      },
+      "hoverEvent": {
+        "action": "show_text",
+        "value": "Wiki Link"
+      },
+      "text": "Beta"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " 1.7.3."
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "File"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ":"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "MainMenu.png"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " The current menu screen."
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "File"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ":"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "McPeMenu.png"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " The Pocket Edition menu screen before 0.7.0 Alpha."
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "File"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ":"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "McPeMenuiOS.jpg"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " The Pocket Edition menu screen in 0.7.0-0.7.2 Alpha."
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "File"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ":"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "0.7.6Amenuscreen.jpg"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": " The current Pocket Edition Menu screen."
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "File"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": ":"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "MainMenu Minceraft.png"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "|"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "The Menu Screen with the title of 'Minceraft'."
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "{{Minecraft}}"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "clickEvent": {
+        "action": "run_command",
+        "value": "Category:Minecraft"
+      },
+      "hoverEvent": {
+        "action": "show_text",
+        "value": "Wiki Link"
+      },
+      "text": "Category:Minecraft"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "clickEvent": {
+        "action": "run_command",
+        "value": "Category:Gameplay"
+      },
+      "hoverEvent": {
+        "action": "show_text",
+        "value": "Wiki Link"
+      },
+      "text": "Category:Gameplay"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "clickEvent": {
+        "action": "run_command",
+        "value": "de:Men\u00fc"
+      },
+      "hoverEvent": {
+        "action": "show_text",
+        "value": "Wiki Link"
+      },
+      "text": "de:Men\u00fc"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "clickEvent": {
+        "action": "run_command",
+        "value": "ja:????"
+      },
+      "hoverEvent": {
+        "action": "show_text",
+        "value": "Wiki Link"
+      },
+      "text": "ja:????"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "clickEvent": {
+        "action": "run_command",
+        "value": "nl:Menuscherm"
+      },
+      "hoverEvent": {
+        "action": "show_text",
+        "value": "Wiki Link"
+      },
+      "text": "nl:Menuscherm"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "clickEvent": {
+        "action": "run_command",
+        "value": "zh:????"
+      },
+      "hoverEvent": {
+        "action": "show_text",
+        "value": "Wiki Link"
+      },
+      "text": "zh:????"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "clickEvent": {
+        "action": "run_command",
+        "value": "it:Schermata_del_men\u00f9"
+      },
+      "hoverEvent": {
+        "action": "show_text",
+        "value": "Wiki Link"
+      },
+      "text": "it:Schermata_del_men\u00f9"
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\n"
+    },
+    "\n",
+    "",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "\t<\/div>"
+    },
+    "\n",
+    "",
+    {
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false,
+      "text": "<\/div>"
+    },
+    "\n"
+  ],
+  "text": ""
+}
+

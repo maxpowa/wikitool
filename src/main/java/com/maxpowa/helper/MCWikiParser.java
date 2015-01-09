@@ -5,6 +5,7 @@ import java.util.regex.Pattern;
 
 import com.maxpowa.WikiUtil.ArticleParser;
 
+@Deprecated
 public class MCWikiParser extends ArticleParser {
 
     @Override
