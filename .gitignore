@@ -82,3 +82,6 @@ local.properties
 config/
 logs/
 options.txt
+saves/
+crash-reports/
+usernamecache.json

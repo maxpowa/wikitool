@@ -20,7 +20,7 @@ import scala.actors.threadpool.Arrays;
 import com.google.common.collect.Sets;
 import com.maxpowa.WikiTool;
 import com.maxpowa.helper.ChatComponentPrinter;
-import com.maxpowa.helper.WikitoolFontRenderer;
+import com.maxpowa.helper.WikitoolFontHelper;
 import com.maxpowa.ui.GuiWikiScreen;
 
 import de.fau.cs.osr.ptk.common.ast.AstNode;
@@ -41,10 +41,8 @@ public class GuiWikiPage extends GuiScreen {
         IChatComponent cmp = ChatComponentPrinter.print(astNode, subCategory);
 
         // out = cmp;
-        // strings =
-        // WikitoolFontRenderer.getInstance().listIChatComponentToWidth(cmp,
-        // mc.currentScreen.width - 30);
-        strings = WikitoolFontRenderer.getInstance().listIChatComponentToWidth(cmp, 50);
+        strings = WikitoolFontHelper.listIChatComponentToWidth(cmp, mc.currentScreen.width - 50);
+        //strings = WikitoolFontRenderer.getInstance().listIChatComponentToWidth(cmp, 50);
     }
 
     public void mouseWheel() {
@@ -71,10 +69,16 @@ public class GuiWikiPage extends GuiScreen {
                 this.drawString(cmp, 15, (yOffset += 10) + 20, mouseX, mouseY, argb(alpha, 255, 255, 255), false);
         }
     }
-
+    
     @SuppressWarnings("unchecked")
     public void drawString(IChatComponent cmp, int x, int y, int mouseX, int mouseY, int color, boolean shadow) {
-        mc.fontRenderer.drawString(cmp.getFormattedText(), x, y, color, shadow);
+        if (cmp.getUnformattedText().replaceAll("\\s","").equalsIgnoreCase("------")) {
+            //WikiTool.log.info("Drawing horizontal line at "+(y+4));
+            //this.drawHorizontalLine(30, this.width-30, y+4, 0xFFFFFF);
+            this.drawGradientRect(x, y+4, this.width-x, y+5, 0xFFFFFFFF, 0xFFFFFFFF);
+        } else {
+            mc.fontRenderer.drawString(cmp.getFormattedText(), x, y, color, shadow);
+        }
 
         for (IChatComponent child : (Iterable<IChatComponent>) cmp) {
             ChatStyle style = child.getChatStyle();
@@ -202,6 +206,10 @@ public class GuiWikiPage extends GuiScreen {
 
     public static final int byteArrToInt(byte[] colorByteArr) {
         return (colorByteArr[0] << 24) + ((colorByteArr[1] & 0xFF) << 16) + ((colorByteArr[2] & 0xFF) << 8) + (colorByteArr[3] & 0xFF);
+    }
+
+    public void setZlevel(float zLevel) {
+        this.zLevel = zLevel;
     }
 
 }

@@ -264,6 +264,9 @@ public class ChatComponentPrinter extends AstVisitor {
         iterate(s.getTitle());
 
         currentStyle.setBold(false);
+        printNewline(false);
+        print("------");
+        
         incIndent("\t\t");
         iterate(s.getBody());
         decIndent();

@@ -5,29 +5,13 @@ import java.util.Iterator;
 import java.util.List;
 
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.IChatComponent;
-import net.minecraft.util.ResourceLocation;
 
-public class WikitoolFontRenderer extends FontRenderer {
-
-    public static WikitoolFontRenderer INSTANCE;
-
-    static {
-        INSTANCE = new WikitoolFontRenderer();
-    }
-
-    private WikitoolFontRenderer() {
-        super(Minecraft.getMinecraft().gameSettings, new ResourceLocation("textures/font/ascii.png"), Minecraft.getMinecraft().renderEngine, false);
-    }
-
-    public static WikitoolFontRenderer getInstance() {
-        return INSTANCE;
-    }
+public class WikitoolFontHelper {
 
     @SuppressWarnings("unchecked")
-    public List<IChatComponent> listIChatComponentToWidth(IChatComponent input, int width) {
+    public static List<IChatComponent> listIChatComponentToWidth(IChatComponent input, int width) {
         List<IChatComponent> output = new ArrayList<IChatComponent>();
         Iterator<IChatComponent> inputIterator = input.iterator();
 
@@ -40,27 +24,12 @@ public class WikitoolFontRenderer extends FontRenderer {
         while (inputIterator.hasNext()) {
             IChatComponent current = inputIterator.next();
             String raw = current.getUnformattedText();
-            int sectionWidth = this.getStringWidth(raw);
+            int sectionWidth = Minecraft.getMinecraft().fontRenderer.getStringWidth(raw);
             currentLineWidth += sectionWidth;
 
             if (currentLineWidth > width) {
-                int splitpoint = this.sizeStringToWidth(raw, sectionWidth - (currentLineWidth - width));
-                String thisLine = current.getUnformattedText().substring(0, splitpoint);
-                char splitChar = current.getUnformattedText().charAt(splitpoint);
-                boolean flag = splitChar == 32 || splitChar == 10;
-
-                ChatComponentText line = new ChatComponentText(thisLine);
-                line.setChatStyle(current.getChatStyle());
-                // if this is longer than the width then we will have issues.
-                ChatComponentText next = new ChatComponentText(current.getUnformattedText().substring(splitpoint + (flag ? 1 : 0)));
-                next.setChatStyle(current.getChatStyle());
-
-                lastComponent.appendSibling(line);
-                output.add(lastComponent.createCopy());
-
-                lastComponent = new ChatComponentText("");
-                lastComponent.appendSibling(next);
-                currentLineWidth = this.getStringWidth(lastComponent.getUnformattedText());
+                lastComponent = chopToWidth(current, lastComponent, output, width, currentLineWidth);
+                currentLineWidth = Minecraft.getMinecraft().fontRenderer.getStringWidth(lastComponent.getUnformattedText());
             } else if (currentLineWidth == width) {
                 output.add(lastComponent.createCopy());
                 lastComponent = new ChatComponentText("");
@@ -72,12 +41,42 @@ public class WikitoolFontRenderer extends FontRenderer {
             } else {
                 lastComponent.appendSibling(current.createCopy());
             }
-
         }
         return output;
     }
 
-    private int sizeStringToWidth(String p_78259_1_, int p_78259_2_) {
+    private static IChatComponent chopToWidth(IChatComponent current, IChatComponent lastComponent, List<IChatComponent> output, int maxWidth, int currentLineWidth) {
+        int secWidth = Minecraft.getMinecraft().fontRenderer.getStringWidth(current.getUnformattedText());
+        if (secWidth+currentLineWidth < maxWidth) {
+            lastComponent.appendSibling(current);
+            return lastComponent;
+        }
+        
+        int splitpoint = sizeStringToWidth(current.getUnformattedText(), Minecraft.getMinecraft().fontRenderer.getStringWidth(current.getUnformattedText()) - Math.abs(maxWidth - currentLineWidth));
+        String thisLine = current.getUnformattedText().substring(0, splitpoint);
+        char splitChar = current.getUnformattedText().charAt(splitpoint);
+        boolean flag = splitChar == 32 || splitChar == 10;
+
+        ChatComponentText line = new ChatComponentText(thisLine);
+        line.setChatStyle(current.getChatStyle());
+        
+        lastComponent.appendSibling(line);
+        output.add(lastComponent.createCopy());
+        
+        // if this is longer than the width then we will have issues.
+        IChatComponent next = new ChatComponentText(current.getUnformattedText().substring(splitpoint + (flag ? 1 : 0)));
+        next.setChatStyle(current.getChatStyle());
+
+//        if (Minecraft.getMinecraft().fontRenderer.getStringWidth(next.getUnformattedText())-1 > maxWidth) {
+//            next = chopToWidth(next.createCopy(), new ChatComponentText(""), output, maxWidth, 0);
+//        }
+        
+        lastComponent = new ChatComponentText("");
+        lastComponent.appendSibling(next);
+        return lastComponent;
+    }
+
+    private static int sizeStringToWidth(String p_78259_1_, int p_78259_2_) {
         int j = p_78259_1_.length();
         int k = 0;
         int l = 0;
@@ -108,7 +107,7 @@ public class WikitoolFontRenderer extends FontRenderer {
             case 32:
                 i1 = l;
             default:
-                k += this.getCharWidth(c0);
+                k += Minecraft.getMinecraft().fontRenderer.getCharWidth(c0);
 
                 if (flag) {
                     ++k;
