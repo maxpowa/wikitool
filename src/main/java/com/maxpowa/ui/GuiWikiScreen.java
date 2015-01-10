@@ -13,7 +13,6 @@ import com.maxpowa.WikiUtil;
 import com.maxpowa.WikiUtil.FetchState;
 import com.maxpowa.ui.wiki.GuiWikiPage;
 
-
 public class GuiWikiScreen extends GuiScreen {
 
     private GuiScreen parentScreen;
@@ -30,7 +29,8 @@ public class GuiWikiScreen extends GuiScreen {
     public GuiWikiScreen(GuiScreen parentScreen) {
         this.parentScreen = parentScreen;
         if (WikiTool.getEquiv(parentScreen).contains("#")) {
-            shortTitle = WikiTool.getEquiv(parentScreen).replaceAll("_", " ").split("#")[1];
+            shortTitle = WikiTool.getEquiv(parentScreen).replaceAll("_", " ")
+                    .split("#")[1];
             subCategory = shortTitle;
         } else {
             shortTitle = WikiTool.getEquiv(parentScreen).replaceAll("_", " ");
@@ -39,7 +39,7 @@ public class GuiWikiScreen extends GuiScreen {
         this.pageTitle = WikiTool.getEquiv(parentScreen);
         WikiUtil.getPage(pageTitle, "minecraft.gamepedia.com");
     }
-    
+
     public GuiWikiScreen(String title, GuiScreen parentScreen) {
         this.parentScreen = parentScreen;
         this.shortTitle = title;
@@ -50,18 +50,20 @@ public class GuiWikiScreen extends GuiScreen {
 
     @Override
     public void drawScreen(int mouseX, int mouseY, float partialTicks) {
-        if (wikiPage!=null)
+        if (wikiPage != null)
             wikiPage.mouseWheel();
-        //parentScreen.drawScreen(mouseX, mouseY, partialTicks);
+        // parentScreen.drawScreen(mouseX, mouseY, partialTicks);
         this.startGL();
         this.drawGradientRect(0, 0, width, height, -1072689136, -804253680);
         this.endGL();
 
         this.startGL();
-        mc.renderEngine.bindTexture(new ResourceLocation("wikitool", "textures/gui/book_sprite.png"));
+        mc.renderEngine.bindTexture(new ResourceLocation("wikitool",
+                "textures/gui/book_sprite.png"));
         mc.currentScreen.drawTexturedModalRect(5, 2, 174, 0, 29, 25);
 
-        if (System.nanoTime() - lastAnimationMove > 650000L && index < title.length()) {
+        if (System.nanoTime() - lastAnimationMove > 650000L
+                && index < title.length()) {
             showingTitle += title.toCharArray()[index];
             index++;
             lastAnimationMove = System.nanoTime();
@@ -70,15 +72,17 @@ public class GuiWikiScreen extends GuiScreen {
         this.endGL();
 
         this.startGL();
-        if (WikiUtil.state != FetchState.DONE || WikiUtil.getPage(this.pageTitle, "minecraft.gamepedia.com") == null) {
+        if (WikiUtil.state != FetchState.DONE
+                || WikiUtil.getPage(this.pageTitle, "minecraft.gamepedia.com") == null) {
             load.drawButton(mc, mouseX, mouseY);
         } else {
             if (wikiPage != null) {
-            	wikiPage.height = this.height;
-            	wikiPage.width = this.width;
+                wikiPage.height = this.height;
+                wikiPage.width = this.width;
                 wikiPage.drawScreen(mouseX, mouseY, 0);
             } else {
-                wikiPage = new GuiWikiPage(this, WikiUtil.getPage(this.pageTitle, "minecraft.gamepedia.com"), subCategory);
+                wikiPage = new GuiWikiPage(this, WikiUtil.getPage(
+                        this.pageTitle, "minecraft.gamepedia.com"), subCategory);
             }
         }
         this.endGL();
