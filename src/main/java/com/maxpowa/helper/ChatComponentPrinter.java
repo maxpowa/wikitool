@@ -54,8 +54,6 @@ import org.sweble.wikitext.lazy.utils.XmlAttributeGarbage;
 import org.sweble.wikitext.lazy.utils.XmlCharRef;
 import org.sweble.wikitext.lazy.utils.XmlEntityRef;
 
-import com.maxpowa.WikiTool;
-
 import de.fau.cs.osr.ptk.common.AstVisitor;
 import de.fau.cs.osr.ptk.common.ast.AstNode;
 import de.fau.cs.osr.ptk.common.ast.NodeList;
@@ -105,41 +103,7 @@ public class ChatComponentPrinter extends AstVisitor
 		ChatComponentText txt = new ChatComponentText(text);
 		txt.setChatStyle(currentStyle.createDeepCopy());
 		
-		out.appendSibling(txt);
-	}
-	
-	protected void print(IChatComponent text)
-	{
-		if (text == null)
-			return;
-		
-		if (needIndent)
-		{
-			out.appendText(indent.peek());
-			needIndent = false;
-		}
-		
-		//if (text.getChatStyle() == null)
-		text.setChatStyle(currentStyle.createDeepCopy());
-		
-		out.appendSibling(text);
-	}
-
-	protected void print(EnumChatFormatting format) {
-		if (format == null)
-			return;
-		
-		if (needIndent)
-		{
-			out.appendText(indent.peek());
-			needIndent = false;
-		}
-		
-
-		ChatComponentText txt = new ChatComponentText(format.toString());
-		txt.setChatStyle(currentStyle.createDeepCopy());
-		
-		out.appendSibling(txt);
+		out.appendSibling(txt.createCopy());
 	}
 	
 	protected void print(int number)
@@ -189,14 +153,13 @@ public class ChatComponentPrinter extends AstVisitor
 
 	private boolean renderTemplates = false;
 
-	private List<ExternalLink> numberedLinks = new ArrayList();
-
 	public static IChatComponent print(AstNode node, String articleTitle) {
 		return print(new ChatComponentText(""), node, articleTitle);
 	}
 
 	public static IChatComponent print(ChatComponentText sb, AstNode node, String articleTitle) {
 		new ChatComponentPrinter(sb, articleTitle).go(node.get(0));
+		sb.setChatStyle(new ChatStyle());
 		return sb;
 	}
 
@@ -284,31 +247,41 @@ public class ChatComponentPrinter extends AstVisitor
 	}
 
 	public void visit(Section s) throws IOException {
-		printNewline(false);
-		print("<div class=\"");
-		print(this.classPrefix);
-		print("section\">");
-		printNewline(true);
-		print("\t<h");
-		print(s.getLevel());
-		print(">");
+//		printNewline(false);
+//		print("<div class=\"");
+//		print(this.classPrefix);
+//		print("section\">");
+//		printNewline(true);
+//		print("\t<h");
+//		print(s.getLevel());
+//		print(">");
+//		iterate(s.getTitle());
+//		print("</h");
+//		print(s.getLevel());
+//		print(">");
+//		printNewline(true);
+//		print("\t<div class=\"");
+//		print(this.classPrefix);
+//		print("section-body\">");
+//		printNewline(false);
+//		incIndent("\t\t");
+//		iterate(s.getBody());
+//		decIndent();
+//		printNewline(false);
+//		print("\t</div>");
+//		printNewline(true);
+//		print("</div>");
+//		printNewline(false);
+		
+		ChatStyle style = currentStyle.createDeepCopy();
+		currentStyle.setBold(true);
 		iterate(s.getTitle());
-		print("</h");
-		print(s.getLevel());
-		print(">");
-		printNewline(true);
-		print("\t<div class=\"");
-		print(this.classPrefix);
-		print("section-body\">");
-		printNewline(false);
+		
+		currentStyle.setBold(false);
 		incIndent("\t\t");
 		iterate(s.getBody());
 		decIndent();
-		printNewline(false);
-		print("\t</div>");
-		printNewline(true);
-		print("</div>");
-		printNewline(false);
+		currentStyle = style;
 	}
 
 	public void visit(XmlComment e) throws IOException {
@@ -412,6 +385,8 @@ public class ChatComponentPrinter extends AstVisitor
 		StringBuilder sb = new StringBuilder(link.getTarget().getProtocol()).append(':').append(link.getTarget().getPath());
 		currentStyle.setChatClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, sb.toString()));
 		currentStyle.setChatHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ChatComponentText("External Link: "+sb.toString())));
+		currentStyle.setUnderlined(true);
+		currentStyle.setColor(EnumChatFormatting.BLUE);
 		
 		if (!(link.getTitle().isEmpty()))
 			iterate(link.getTitle());
@@ -428,6 +403,8 @@ public class ChatComponentPrinter extends AstVisitor
 		StringBuilder sb = new StringBuilder(url.getProtocol()).append(':').append(url.getPath());
 		currentStyle.setChatClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, sb.toString()));
 		currentStyle.setChatHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ChatComponentText("External Link")));
+		currentStyle.setUnderlined(true);
+		currentStyle.setColor(EnumChatFormatting.BLUE);
 		
 		print(sb.toString());
 		
@@ -438,7 +415,9 @@ public class ChatComponentPrinter extends AstVisitor
 		ChatStyle tempStyle = currentStyle.createDeepCopy();
 		
 		currentStyle.setChatClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, makeLinkTarget(n)));
-		currentStyle.setChatHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ChatComponentText("Wiki Link: "+n.getTitle())));
+		currentStyle.setChatHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ChatComponentText("Wiki Link: "+makeLinkTitle(n))));
+		currentStyle.setUnderlined(true);
+		currentStyle.setColor(EnumChatFormatting.BLUE);
 		
 		print(makeLinkTarget(n));
 		
@@ -458,74 +437,89 @@ public class ChatComponentPrinter extends AstVisitor
 	}
 
 	public void visit(Table table) throws IOException {
-		printNewline(false);
-		print("<table");
-		iterate(table.getXmlAttributes());
-		print(">");
-		printNewline(false);
+//		printNewline(false);
+//		print("<table");
+//		iterate(table.getXmlAttributes());
+//		print(">");
+//		printNewline(false);
+//		incIndent("\t");
+//		iterate(table.getBody());
+//		decIndent();
+//		printNewline(false);
+//		printNewline(true);
+//		print("</table>");
+//		printNewline(false);
 		incIndent("\t");
 		iterate(table.getBody());
 		decIndent();
-		printNewline(false);
-		printNewline(true);
-		print("</table>");
-		printNewline(false);
 	}
 
 	public void visit(TableCaption caption) throws IOException {
-		printNewline(false);
-		print("<caption");
-		iterate(caption.getXmlAttributes());
-		print(">");
-		printNewline(false);
+//		printNewline(false);
+//		print("<caption");
+//		iterate(caption.getXmlAttributes());
+//		print(">");
+//		printNewline(false);
+//		incIndent("\t");
+//		iterate(caption.getBody());
+//		decIndent();
+//		printNewline(false);
+//		print("</caption>");
+//		printNewline(false);
 		incIndent("\t");
 		iterate(caption.getBody());
 		decIndent();
-		printNewline(false);
-		print("</caption>");
-		printNewline(false);
 	}
 
 	public void visit(TableRow row) throws IOException {
-		printNewline(false);
-		print("<tr");
-		iterate(row.getXmlAttributes());
-		print(">");
-		printNewline(false);
+//		printNewline(false);
+//		print("<tr");
+//		iterate(row.getXmlAttributes());
+//		print(">");
+//		printNewline(false);
+//		incIndent("\t");
+//		iterate(row.getBody());
+//		decIndent();
+//		printNewline(false);
+//		print("</tr>");
+//		printNewline(false);
 		incIndent("\t");
 		iterate(row.getBody());
 		decIndent();
-		printNewline(false);
-		print("</tr>");
-		printNewline(false);
 	}
 
 	public void visit(TableHeader header) throws IOException {
-		printNewline(false);
-		print("<th");
-		iterate(header.getXmlAttributes());
-		print(">");
-		printNewline(false);
+//		printNewline(false);
+//		print("<th");
+//		iterate(header.getXmlAttributes());
+//		print(">");
+//		printNewline(false);
+//		incIndent("\t");
+//		iterate(header.getBody());
+//		decIndent();
+//		printNewline(false);
+//		print("</th>");
+//		printNewline(false);
 		incIndent("\t");
 		iterate(header.getBody());
 		decIndent();
-		printNewline(false);
-		print("</th>");
-		printNewline(false);
 	}
 
 	public void visit(TableCell cell) throws IOException {
-		printNewline(false);
-		print("<td");
-		iterate(cell.getXmlAttributes());
-		print(">");
-		printNewline(false);
+//		printNewline(false);
+//		print("<td");
+//		iterate(cell.getXmlAttributes());
+//		print(">");
+//		printNewline(false);
+//		incIndent("\t");
+//		iterate(cell.getBody());
+//		decIndent();
+//		printNewline(false);
+//		print("</td>");
+//		printNewline(false);
 		incIndent("\t");
 		iterate(cell.getBody());
 		decIndent();
-		printNewline(false);
-		print("</td>");
-		printNewline(false);
 	}
 
 	public void visit(HorizontalRule rule) throws IOException {
@@ -752,16 +746,11 @@ public class ChatComponentPrinter extends AstVisitor
 
 	private boolean isParagraphEmpty(Paragraph p) {
 		if (!(p.isEmpty())) {
-			List l = (List) p.getAttribute("blockLevelElements");
+			List<?> l = (List<?>) p.getAttribute("blockLevelElements");
 			if ((l == null) || (p.size() - l.size() > 0))
 				return false;
 		}
 		return true;
-	}
-
-	private void printExternalLinkNumber(ExternalLink link) {
-		this.numberedLinks.add(link);
-		print(this.numberedLinks.size());
 	}
 
 	private String makeLinkTitle(InternalLink n) {

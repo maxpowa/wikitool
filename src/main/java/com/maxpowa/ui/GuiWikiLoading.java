@@ -67,6 +67,9 @@ public class GuiWikiLoading extends GuiButton {
             case DONE:
                 this.drawCenteredString(mc.fontRenderer, "Error! No information found.", xPosition+17, yPosition+29, 0xFFFFFF);
                 break;
+			case NONE:
+                this.drawCenteredString(mc.fontRenderer, "Error! No information found.", xPosition+17, yPosition+29, 0xFFFFFF);
+				break;
         }
     }
 

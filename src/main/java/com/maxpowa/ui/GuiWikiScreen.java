@@ -52,7 +52,7 @@ public class GuiWikiScreen extends GuiScreen {
     public void drawScreen(int mouseX, int mouseY, float partialTicks) {
         if (wikiPage!=null)
             wikiPage.mouseWheel();
-        parentScreen.drawScreen(mouseX, mouseY, partialTicks);
+        //parentScreen.drawScreen(mouseX, mouseY, partialTicks);
         this.startGL();
         this.drawGradientRect(0, 0, width, height, -1072689136, -804253680);
         this.endGL();
@@ -73,10 +73,13 @@ public class GuiWikiScreen extends GuiScreen {
         if (WikiUtil.state != FetchState.DONE || WikiUtil.getPage(this.pageTitle, "minecraft.gamepedia.com") == null) {
             load.drawButton(mc, mouseX, mouseY);
         } else {
-            if (wikiPage != null)
+            if (wikiPage != null) {
+            	wikiPage.height = this.height;
+            	wikiPage.width = this.width;
                 wikiPage.drawScreen(mouseX, mouseY, 0);
-            else
+            } else {
                 wikiPage = new GuiWikiPage(this, WikiUtil.getPage(this.pageTitle, "minecraft.gamepedia.com"), subCategory);
+            }
         }
         this.endGL();
     }
