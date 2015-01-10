@@ -34,8 +34,7 @@ public class GuiWikiPage extends GuiScreen {
 
     // IChatComponent out;
 
-    public GuiWikiPage(GuiScreen parentScreen, AstNode astNode,
-            String subCategory) {
+    public GuiWikiPage(GuiScreen parentScreen, AstNode astNode, String subCategory) {
         mc = Minecraft.getMinecraft();
         this.parentScreen = parentScreen;
 
@@ -45,8 +44,7 @@ public class GuiWikiPage extends GuiScreen {
         // strings =
         // WikitoolFontRenderer.getInstance().listIChatComponentToWidth(cmp,
         // mc.currentScreen.width - 30);
-        strings = WikitoolFontRenderer.getInstance().listIChatComponentToWidth(
-                cmp, 50);
+        strings = WikitoolFontRenderer.getInstance().listIChatComponentToWidth(cmp, 50);
     }
 
     public void mouseWheel() {
@@ -70,67 +68,41 @@ public class GuiWikiPage extends GuiScreen {
         for (IChatComponent cmp : strings) {
             lineNum++;
             if (lineNum > topLine && lineNum < topLine + maxLines)
-                this.drawString(cmp, 15, (yOffset += 10) + 20, mouseX, mouseY,
-                        argb(alpha, 255, 255, 255), false);
+                this.drawString(cmp, 15, (yOffset += 10) + 20, mouseX, mouseY, argb(alpha, 255, 255, 255), false);
         }
     }
 
     @SuppressWarnings("unchecked")
-    public void drawString(IChatComponent cmp, int x, int y, int mouseX,
-            int mouseY, int color, boolean shadow) {
+    public void drawString(IChatComponent cmp, int x, int y, int mouseX, int mouseY, int color, boolean shadow) {
         mc.fontRenderer.drawString(cmp.getFormattedText(), x, y, color, shadow);
 
         for (IChatComponent child : (Iterable<IChatComponent>) cmp) {
             ChatStyle style = child.getChatStyle();
-            int linkWidth = mc.fontRenderer.getStringWidth(child
-                    .getFormattedText());
-            int linkX = x
-                    + mc.fontRenderer.getStringWidth(cmp.getFormattedText()
-                            .substring(
-                                    0,
-                                    cmp.getFormattedText().indexOf(
-                                            child.getFormattedText())));
-            if (linkX <= mouseX && mouseX <= linkX + linkWidth && y <= mouseY
-                    && mouseY < y + 10) {
-                if (style.getChatHoverEvent() != null
-                        && !style.getChatHoverEvent().getValue()
-                                .getFormattedText().isEmpty()) {
+            int linkWidth = mc.fontRenderer.getStringWidth(child.getFormattedText());
+            int linkX = x + mc.fontRenderer.getStringWidth(cmp.getFormattedText().substring(0, cmp.getFormattedText().indexOf(child.getFormattedText())));
+            if (linkX <= mouseX && mouseX <= linkX + linkWidth && y <= mouseY && mouseY < y + 10) {
+                if (style.getChatHoverEvent() != null && !style.getChatHoverEvent().getValue().getFormattedText().isEmpty()) {
                     // WikiTool.log.info("Found a hover event on text: \""+child.getUnformattedText()+"\"");
-                    this.drawLinkHighlight(
-                            Arrays.asList(style.getChatHoverEvent().getValue()
-                                    .getFormattedText().split("\n")), mouseX,
-                            mouseY, Minecraft.getMinecraft().fontRenderer);
+                    this.drawLinkHighlight(Arrays.asList(style.getChatHoverEvent().getValue().getFormattedText().split("\n")), mouseX, mouseY, Minecraft.getMinecraft().fontRenderer);
                     if (Mouse.isButtonDown(0)) {
                         switch (style.getChatClickEvent().getAction()) {
                         case OPEN_FILE:
                             break;
                         case OPEN_URL:
                             try {
-                                URI uri = new URI(style.getChatClickEvent()
-                                        .getValue());
+                                URI uri = new URI(style.getChatClickEvent().getValue());
 
-                                if (!Sets
-                                        .newHashSet(
-                                                new String[] { "http", "https" })
-                                        .contains(uri.getScheme().toLowerCase())) {
-                                    throw new URISyntaxException(style
-                                            .getChatClickEvent().getValue(),
-                                            "Unsupported protocol: "
-                                                    + uri.getScheme()
-                                                            .toLowerCase());
+                                if (!Sets.newHashSet(new String[] { "http", "https" }).contains(uri.getScheme().toLowerCase())) {
+                                    throw new URISyntaxException(style.getChatClickEvent().getValue(), "Unsupported protocol: " + uri.getScheme().toLowerCase());
                                 }
 
                                 this.openUri(uri);
                             } catch (URISyntaxException urisyntaxexception) {
-                                WikiTool.log.error("Can\'t open url for "
-                                        + style.getChatClickEvent(),
-                                        urisyntaxexception);
+                                WikiTool.log.error("Can\'t open url for " + style.getChatClickEvent(), urisyntaxexception);
                             }
                             break;
                         case RUN_COMMAND:
-                            mc.displayGuiScreen(new GuiWikiScreen(style
-                                    .getChatClickEvent().getValue(),
-                                    mc.currentScreen));
+                            mc.displayGuiScreen(new GuiWikiScreen(style.getChatClickEvent().getValue(), mc.currentScreen));
                             break;
                         case SUGGEST_COMMAND:
                             break;
@@ -157,8 +129,7 @@ public class GuiWikiPage extends GuiScreen {
         }
     }
 
-    protected void drawLinkHighlight(List<String> text, int x, int y,
-            FontRenderer renderer) {
+    protected void drawLinkHighlight(List<String> text, int x, int y, FontRenderer renderer) {
         GL11.glPushMatrix();
         GL11.glDisable(GL12.GL_RESCALE_NORMAL);
         GL11.glDisable(GL11.GL_LIGHTING);
@@ -195,21 +166,16 @@ public class GuiWikiPage extends GuiScreen {
         this.zLevel = 300.0F;
         int j1 = -267386864;
         this.drawGradientRect(j2 - 3, k2 - 4, j2 + k + 3, k2 - 3, j1, j1);
-        this.drawGradientRect(j2 - 3, k2 + i1 + 3, j2 + k + 3, k2 + i1 + 4, j1,
-                j1);
+        this.drawGradientRect(j2 - 3, k2 + i1 + 3, j2 + k + 3, k2 + i1 + 4, j1, j1);
         this.drawGradientRect(j2 - 3, k2 - 3, j2 + k + 3, k2 + i1 + 3, j1, j1);
         this.drawGradientRect(j2 - 4, k2 - 3, j2 - 3, k2 + i1 + 3, j1, j1);
-        this.drawGradientRect(j2 + k + 3, k2 - 3, j2 + k + 4, k2 + i1 + 3, j1,
-                j1);
+        this.drawGradientRect(j2 + k + 3, k2 - 3, j2 + k + 4, k2 + i1 + 3, j1, j1);
         int k1 = 1347420415;
         int l1 = (k1 & 16711422) >> 1 | k1 & -16777216;
-        this.drawGradientRect(j2 - 3, k2 - 3 + 1, j2 - 3 + 1, k2 + i1 + 3 - 1,
-                k1, l1);
-        this.drawGradientRect(j2 + k + 2, k2 - 3 + 1, j2 + k + 3, k2 + i1 + 3
-                - 1, k1, l1);
+        this.drawGradientRect(j2 - 3, k2 - 3 + 1, j2 - 3 + 1, k2 + i1 + 3 - 1, k1, l1);
+        this.drawGradientRect(j2 + k + 2, k2 - 3 + 1, j2 + k + 3, k2 + i1 + 3 - 1, k1, l1);
         this.drawGradientRect(j2 - 3, k2 - 3, j2 + k + 3, k2 - 3 + 1, k1, k1);
-        this.drawGradientRect(j2 - 3, k2 + i1 + 2, j2 + k + 3, k2 + i1 + 3, l1,
-                l1);
+        this.drawGradientRect(j2 - 3, k2 + i1 + 2, j2 + k + 3, k2 + i1 + 3, l1, l1);
 
         for (int i2 = 0; i2 < text.size(); ++i2) {
             String s1 = (String) text.get(i2);
@@ -235,8 +201,7 @@ public class GuiWikiPage extends GuiScreen {
     }
 
     public static final int byteArrToInt(byte[] colorByteArr) {
-        return (colorByteArr[0] << 24) + ((colorByteArr[1] & 0xFF) << 16)
-                + ((colorByteArr[2] & 0xFF) << 8) + (colorByteArr[3] & 0xFF);
+        return (colorByteArr[0] << 24) + ((colorByteArr[1] & 0xFF) << 16) + ((colorByteArr[2] & 0xFF) << 8) + (colorByteArr[3] & 0xFF);
     }
 
 }

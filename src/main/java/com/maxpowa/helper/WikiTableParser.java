@@ -18,8 +18,7 @@ public class WikiTableParser {
 
     public WikiTable parse() {
         // TODO ACTUALLY PARSE THE TABLE
-        WikiTool.log.info("WOULD BE PARSING " + this.name + " WITH CONTENT "
-                + this.content);
+        WikiTool.log.info("WOULD BE PARSING " + this.name + " WITH CONTENT " + this.content);
         return this.obj;
     }
 

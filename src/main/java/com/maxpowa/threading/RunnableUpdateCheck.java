@@ -21,15 +21,12 @@ public class RunnableUpdateCheck implements Runnable {
     public void run() {
         try {
             JsonParser parser = new JsonParser();
-            Reader reader = new InputStreamReader(new URL(modsioApi.replace(
-                    "{modname}", id + "")).openStream());
+            Reader reader = new InputStreamReader(new URL(modsioApi.replace("{modname}", id + "")).openStream());
             JsonElement json = parser.parse(reader);
             System.out.println(json.toString());
-            String latestVersion = json.getAsJsonObject().get("version")
-                    .getAsString();
+            String latestVersion = json.getAsJsonObject().get("version").getAsString();
             if (checkForUpdate(version, latestVersion)) {
-                URL url = new URL(json.getAsJsonObject().get("download")
-                        .getAsString());
+                URL url = new URL(json.getAsJsonObject().get("download").getAsString());
                 // do update-y things
             }
         } catch (Exception ex) {

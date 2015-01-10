@@ -31,11 +31,9 @@ public class RunnableFetchPage implements Runnable {
             WikiUtil.state = FetchState.READING;
             try {
                 WikiTool.log.info(this.page + " found on " + wiki.getDomain());
-                WikiUtil.cache.put(wiki.getDomain() + "-" + page,
-                        lp.parseArticle(wiki.getPageText(page), page));
+                WikiUtil.cache.put(wiki.getDomain() + "-" + page, lp.parseArticle(wiki.getPageText(page), page));
             } catch (FileNotFoundException e) {
-                WikiTool.log.info(this.page + " was not found on "
-                        + wiki.getDomain());
+                WikiTool.log.info(this.page + " was not found on " + wiki.getDomain());
             } catch (IOException e) {
                 e.printStackTrace();
             } catch (ParseException e) {

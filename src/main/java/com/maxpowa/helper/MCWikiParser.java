@@ -19,17 +19,13 @@ public class MCWikiParser extends ArticleParser {
             i++;
         }
 
-        Matcher m = Pattern.compile("(\\{\\|(?:.|\\n)*?\\|\\})",
-                Pattern.DOTALL | Pattern.MULTILINE).matcher(input);
+        Matcher m = Pattern.compile("(\\{\\|(?:.|\\n)*?\\|\\})", Pattern.DOTALL | Pattern.MULTILINE).matcher(input);
 
         for (int t = 0; t < 10 && m.find(); t++) {
             new WikiTableParser(title + "#" + (t), m.group(1)).parse();
         }
         input = m.replaceAll("");
-        input = input.replaceAll("\\{\\{cleanup\\}\\}\\n", "")
-                .replaceAll("\\{\\{[mM]inecraft\\}\\}\\n", "")
-                .replaceAll("\\[\\[(?=[^FILE])", "\u00a73")
-                .replaceAll("\\[\\[", "").replaceAll("\\]\\]", "\u00a7f");
+        input = input.replaceAll("\\{\\{cleanup\\}\\}\\n", "").replaceAll("\\{\\{[mM]inecraft\\}\\}\\n", "").replaceAll("\\[\\[(?=[^FILE])", "\u00a73").replaceAll("\\[\\[", "").replaceAll("\\]\\]", "\u00a7f");
         return input;
     }
 

@@ -19,9 +19,7 @@ public class WikitoolFontRenderer extends FontRenderer {
     }
 
     private WikitoolFontRenderer() {
-        super(Minecraft.getMinecraft().gameSettings, new ResourceLocation(
-                "textures/font/ascii.png"),
-                Minecraft.getMinecraft().renderEngine, false);
+        super(Minecraft.getMinecraft().gameSettings, new ResourceLocation("textures/font/ascii.png"), Minecraft.getMinecraft().renderEngine, false);
     }
 
     public static WikitoolFontRenderer getInstance() {
@@ -29,8 +27,7 @@ public class WikitoolFontRenderer extends FontRenderer {
     }
 
     @SuppressWarnings("unchecked")
-    public List<IChatComponent> listIChatComponentToWidth(IChatComponent input,
-            int width) {
+    public List<IChatComponent> listIChatComponentToWidth(IChatComponent input, int width) {
         List<IChatComponent> output = new ArrayList<IChatComponent>();
         Iterator<IChatComponent> inputIterator = input.iterator();
 
@@ -47,20 +44,15 @@ public class WikitoolFontRenderer extends FontRenderer {
             currentLineWidth += sectionWidth;
 
             if (currentLineWidth > width) {
-                int splitpoint = this.sizeStringToWidth(raw, sectionWidth
-                        - (currentLineWidth - width));
-                String thisLine = current.getUnformattedText().substring(0,
-                        splitpoint);
-                char splitChar = current.getUnformattedText()
-                        .charAt(splitpoint);
+                int splitpoint = this.sizeStringToWidth(raw, sectionWidth - (currentLineWidth - width));
+                String thisLine = current.getUnformattedText().substring(0, splitpoint);
+                char splitChar = current.getUnformattedText().charAt(splitpoint);
                 boolean flag = splitChar == 32 || splitChar == 10;
 
                 ChatComponentText line = new ChatComponentText(thisLine);
                 line.setChatStyle(current.getChatStyle());
                 // if this is longer than the width then we will have issues.
-                ChatComponentText next = new ChatComponentText(current
-                        .getUnformattedText().substring(
-                                splitpoint + (flag ? 1 : 0)));
+                ChatComponentText next = new ChatComponentText(current.getUnformattedText().substring(splitpoint + (flag ? 1 : 0)));
                 next.setChatStyle(current.getChatStyle());
 
                 lastComponent.appendSibling(line);
@@ -68,8 +60,7 @@ public class WikitoolFontRenderer extends FontRenderer {
 
                 lastComponent = new ChatComponentText("");
                 lastComponent.appendSibling(next);
-                currentLineWidth = this.getStringWidth(lastComponent
-                        .getUnformattedText());
+                currentLineWidth = this.getStringWidth(lastComponent.getUnformattedText());
             } else if (currentLineWidth == width) {
                 output.add(lastComponent.createCopy());
                 lastComponent = new ChatComponentText("");
@@ -142,8 +133,7 @@ public class WikitoolFontRenderer extends FontRenderer {
      * Checks if the char code is a hexadecimal character, used to set colour.
      */
     private static boolean isFormatColor(char p_78272_0_) {
-        return p_78272_0_ >= 48 && p_78272_0_ <= 57 || p_78272_0_ >= 97
-                && p_78272_0_ <= 102 || p_78272_0_ >= 65 && p_78272_0_ <= 70;
+        return p_78272_0_ >= 48 && p_78272_0_ <= 57 || p_78272_0_ >= 97 && p_78272_0_ <= 102 || p_78272_0_ >= 65 && p_78272_0_ <= 70;
     }
 
 }

@@ -29,8 +29,7 @@ public class GuiWikiScreen extends GuiScreen {
     public GuiWikiScreen(GuiScreen parentScreen) {
         this.parentScreen = parentScreen;
         if (WikiTool.getEquiv(parentScreen).contains("#")) {
-            shortTitle = WikiTool.getEquiv(parentScreen).replaceAll("_", " ")
-                    .split("#")[1];
+            shortTitle = WikiTool.getEquiv(parentScreen).replaceAll("_", " ").split("#")[1];
             subCategory = shortTitle;
         } else {
             shortTitle = WikiTool.getEquiv(parentScreen).replaceAll("_", " ");
@@ -58,12 +57,10 @@ public class GuiWikiScreen extends GuiScreen {
         this.endGL();
 
         this.startGL();
-        mc.renderEngine.bindTexture(new ResourceLocation("wikitool",
-                "textures/gui/book_sprite.png"));
+        mc.renderEngine.bindTexture(new ResourceLocation("wikitool", "textures/gui/book_sprite.png"));
         mc.currentScreen.drawTexturedModalRect(5, 2, 174, 0, 29, 25);
 
-        if (System.nanoTime() - lastAnimationMove > 650000L
-                && index < title.length()) {
+        if (System.nanoTime() - lastAnimationMove > 650000L && index < title.length()) {
             showingTitle += title.toCharArray()[index];
             index++;
             lastAnimationMove = System.nanoTime();
@@ -72,8 +69,7 @@ public class GuiWikiScreen extends GuiScreen {
         this.endGL();
 
         this.startGL();
-        if (WikiUtil.state != FetchState.DONE
-                || WikiUtil.getPage(this.pageTitle, "minecraft.gamepedia.com") == null) {
+        if (WikiUtil.state != FetchState.DONE || WikiUtil.getPage(this.pageTitle, "minecraft.gamepedia.com") == null) {
             load.drawButton(mc, mouseX, mouseY);
         } else {
             if (wikiPage != null) {
@@ -81,8 +77,7 @@ public class GuiWikiScreen extends GuiScreen {
                 wikiPage.width = this.width;
                 wikiPage.drawScreen(mouseX, mouseY, 0);
             } else {
-                wikiPage = new GuiWikiPage(this, WikiUtil.getPage(
-                        this.pageTitle, "minecraft.gamepedia.com"), subCategory);
+                wikiPage = new GuiWikiPage(this, WikiUtil.getPage(this.pageTitle, "minecraft.gamepedia.com"), subCategory);
             }
         }
         this.endGL();

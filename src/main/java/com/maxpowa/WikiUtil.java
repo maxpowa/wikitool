@@ -51,8 +51,7 @@ public class WikiUtil {
 
     public static void fetchPage(String page) {
         while (cache.size() > 20) {
-            log.info("Removing " + cache.lastKey()
-                    + " from the cache! (Limit 20 cached pages)");
+            log.info("Removing " + cache.lastKey() + " from the cache! (Limit 20 cached pages)");
             cache.remove(cache.lastKey());
         }
 

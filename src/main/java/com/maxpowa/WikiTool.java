@@ -40,9 +40,7 @@ public class WikiTool {
     public void preInit(FMLPreInitializationEvent event) {
         log = event.getModLog();
         WikiUtil.log = log;
-        new Thread(
-                new RunnableUpdateCheck(1055, event.getModMetadata().version))
-                .start();
+        new Thread(new RunnableUpdateCheck(1055, event.getModMetadata().version)).start();
         log.info("Starting initialization of default wikis");
         Wiki ftbWiki = new Wiki("ftbwiki.org", "");
         ftbWiki.setUsingCompressedRequests(false);
@@ -53,8 +51,7 @@ public class WikiTool {
         WikiUtil.registerParser(new MCWikiParser());
         log.info("Finished initializing " + wikis.size() + " wikis.");
         log.info("Loading vanilla gui wiki pages");
-        BufferedReader in = new BufferedReader(new InputStreamReader(getClass()
-                .getResourceAsStream("/assets/wikitool/guiwikiequiv.txt")));
+        BufferedReader in = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("/assets/wikitool/guiwikiequiv.txt")));
         String line = "";
         try {
             while ((line = in.readLine()) != null) {
@@ -89,15 +86,13 @@ public class WikiTool {
     @SubscribeEvent
     public void RenderTickEvent(RenderTickEvent event) {
         Minecraft mc = Minecraft.getMinecraft();
-        if ((event.type == Type.RENDER || event.type == Type.CLIENT)
-                && event.phase == Phase.END
-                && !(mc.currentScreen instanceof GuiWikiScreen)
-                && mc.currentScreen != null) { // && mc.currentScreen instanceof
-                                               // GuiMainMenu) {
-            int mouseX = Mouse.getX() * mc.currentScreen.width
-                    / mc.displayWidth;
-            int mouseY = mc.currentScreen.height - Mouse.getY()
-                    * mc.currentScreen.height / mc.displayHeight - 1;
+        if ((event.type == Type.RENDER || event.type == Type.CLIENT) && event.phase == Phase.END && !(mc.currentScreen instanceof GuiWikiScreen) && mc.currentScreen != null) { // &&
+                                                                                                                                                                                // mc.currentScreen
+                                                                                                                                                                                // instanceof
+                                                                                                                                                                                // GuiMainMenu)
+                                                                                                                                                                                // {
+            int mouseX = Mouse.getX() * mc.currentScreen.width / mc.displayWidth;
+            int mouseY = mc.currentScreen.height - Mouse.getY() * mc.currentScreen.height / mc.displayHeight - 1;
             button.drawButton(Minecraft.getMinecraft(), mouseX, mouseY);
         }
     }

@@ -143,8 +143,7 @@ public class ChatComponentPrinter extends AstVisitor {
         return print(new ChatComponentText(""), node, articleTitle);
     }
 
-    public static IChatComponent print(ChatComponentText sb, AstNode node,
-            String articleTitle) {
+    public static IChatComponent print(ChatComponentText sb, AstNode node, String articleTitle) {
         new ChatComponentPrinter(sb, articleTitle).go(node.get(0));
         sb.setChatStyle(new ChatStyle());
         return sb;
@@ -369,13 +368,9 @@ public class ChatComponentPrinter extends AstVisitor {
     public void visit(ExternalLink link) throws IOException {
         ChatStyle tempStyle = currentStyle.createDeepCopy();
 
-        StringBuilder sb = new StringBuilder(link.getTarget().getProtocol())
-                .append(':').append(link.getTarget().getPath());
-        currentStyle.setChatClickEvent(new ClickEvent(
-                ClickEvent.Action.OPEN_URL, sb.toString()));
-        currentStyle.setChatHoverEvent(new HoverEvent(
-                HoverEvent.Action.SHOW_TEXT, new ChatComponentText(
-                        "External Link: " + sb.toString())));
+        StringBuilder sb = new StringBuilder(link.getTarget().getProtocol()).append(':').append(link.getTarget().getPath());
+        currentStyle.setChatClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, sb.toString()));
+        currentStyle.setChatHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ChatComponentText("External Link: " + sb.toString())));
         currentStyle.setUnderlined(true);
         currentStyle.setColor(EnumChatFormatting.BLUE);
 
@@ -391,13 +386,9 @@ public class ChatComponentPrinter extends AstVisitor {
     public void visit(Url url) throws IOException {
         ChatStyle tempStyle = currentStyle.createDeepCopy();
 
-        StringBuilder sb = new StringBuilder(url.getProtocol()).append(':')
-                .append(url.getPath());
-        currentStyle.setChatClickEvent(new ClickEvent(
-                ClickEvent.Action.OPEN_URL, sb.toString()));
-        currentStyle.setChatHoverEvent(new HoverEvent(
-                HoverEvent.Action.SHOW_TEXT, new ChatComponentText(
-                        "External Link")));
+        StringBuilder sb = new StringBuilder(url.getProtocol()).append(':').append(url.getPath());
+        currentStyle.setChatClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, sb.toString()));
+        currentStyle.setChatHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ChatComponentText("External Link")));
         currentStyle.setUnderlined(true);
         currentStyle.setColor(EnumChatFormatting.BLUE);
 
@@ -409,11 +400,8 @@ public class ChatComponentPrinter extends AstVisitor {
     public void visit(InternalLink n) throws IOException {
         ChatStyle tempStyle = currentStyle.createDeepCopy();
 
-        currentStyle.setChatClickEvent(new ClickEvent(
-                ClickEvent.Action.RUN_COMMAND, makeLinkTarget(n)));
-        currentStyle.setChatHoverEvent(new HoverEvent(
-                HoverEvent.Action.SHOW_TEXT, new ChatComponentText(
-                        "Wiki Link: " + makeLinkTitle(n))));
+        currentStyle.setChatClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, makeLinkTarget(n)));
+        currentStyle.setChatHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ChatComponentText("Wiki Link: " + makeLinkTitle(n))));
         currentStyle.setUnderlined(true);
         currentStyle.setColor(EnumChatFormatting.BLUE);
 
@@ -714,8 +702,7 @@ public class ChatComponentPrinter extends AstVisitor {
             return;
         this.classPrefix = classPrefix;
         if (!(classPrefix.isEmpty())) {
-            this.classPrefix = new StringBuilder().append(this.classPrefix)
-                    .append('-').toString();
+            this.classPrefix = new StringBuilder().append(this.classPrefix).append('-').toString();
         }
     }
 

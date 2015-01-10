@@ -27,10 +27,8 @@ public class GuiWikiLoading extends GuiButton {
         GL11.glEnable(GL11.GL_BLEND);
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 
-        mc.renderEngine.bindTexture(new ResourceLocation("wikitool",
-                "textures/gui/book_sprite.png"));
-        mc.currentScreen.drawTexturedModalRect(xPosition, yPosition, shift, 25,
-                29, 23);
+        mc.renderEngine.bindTexture(new ResourceLocation("wikitool", "textures/gui/book_sprite.png"));
+        mc.currentScreen.drawTexturedModalRect(xPosition, yPosition, shift, 25, 29, 23);
 
         if (System.nanoTime() - lastAnimationMove > 200000000L) {
             shift += 29;
@@ -58,26 +56,19 @@ public class GuiWikiLoading extends GuiButton {
 
         switch (WikiUtil.state) {
         case SEARCHING:
-            this.drawCenteredString(mc.fontRenderer, "Searching...",
-                    xPosition + 17, yPosition + 29, 0xFFFFFF);
+            this.drawCenteredString(mc.fontRenderer, "Searching...", xPosition + 17, yPosition + 29, 0xFFFFFF);
             break;
         case READING:
-            this.drawCenteredString(mc.fontRenderer, "Reading...",
-                    xPosition + 17, yPosition + 29, 0xFFFFFF);
+            this.drawCenteredString(mc.fontRenderer, "Reading...", xPosition + 17, yPosition + 29, 0xFFFFFF);
             break;
         case PARSING:
-            this.drawCenteredString(mc.fontRenderer, "Parsing...",
-                    xPosition + 17, yPosition + 29, 0xFFFFFF);
+            this.drawCenteredString(mc.fontRenderer, "Parsing...", xPosition + 17, yPosition + 29, 0xFFFFFF);
             break;
         case DONE:
-            this.drawCenteredString(mc.fontRenderer,
-                    "Error! No information found.", xPosition + 17,
-                    yPosition + 29, 0xFFFFFF);
+            this.drawCenteredString(mc.fontRenderer, "Error! No information found.", xPosition + 17, yPosition + 29, 0xFFFFFF);
             break;
         case NONE:
-            this.drawCenteredString(mc.fontRenderer,
-                    "Error! No information found.", xPosition + 17,
-                    yPosition + 29, 0xFFFFFF);
+            this.drawCenteredString(mc.fontRenderer, "Error! No information found.", xPosition + 17, yPosition + 29, 0xFFFFFF);
             break;
         }
     }
