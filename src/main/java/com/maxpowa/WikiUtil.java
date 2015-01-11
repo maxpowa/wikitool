@@ -3,10 +3,9 @@ package com.maxpowa;
 import java.util.TreeMap;
 
 import org.apache.logging.log4j.Logger;
+import org.sweble.wikitext.parser.nodes.WtNode;
 
 import com.maxpowa.threading.RunnableFetchPage;
-
-import de.fau.cs.osr.ptk.common.ast.AstNode;
 
 public class WikiUtil {
 
@@ -14,9 +13,9 @@ public class WikiUtil {
     public static FetchState state = FetchState.NONE;
     protected static Logger log;
 
-    public static TreeMap<String, AstNode> cache = new TreeMap<String, AstNode>();
+    public static TreeMap<String, WtNode> cache = new TreeMap<String, WtNode>();
 
-    public static AstNode getPage(String page, String domain) {
+    public static WtNode getPage(String page, String domain) {
         if (page.contains("#"))
             page = page.split("#")[0];
 
@@ -30,7 +29,7 @@ public class WikiUtil {
         }
     }
     
-    public static AstNode getLastPage() {
+    public static WtNode getLastPage() {
         if (state == FetchState.DONE)
             return cache.get(cache.lastKey());
         else

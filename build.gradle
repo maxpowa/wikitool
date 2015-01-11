@@ -32,7 +32,7 @@ dependencies {
     //compile "some.group:artifact:version:classifier"
     //compile "some.group:artifact:version"
     
-    compile 'org.sweble.wikitext:swc-parser-lazy:1.1.0'
+    compile 'org.sweble.wikitext:swc-parser-lazy:2.0.0'
       
     // real examples
     //compile 'com.mod-buildcraft:buildcraft:6.0.8:dev'  // adds buildcraft to the dev env

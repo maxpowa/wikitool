@@ -3,8 +3,7 @@ package com.maxpowa.threading;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-import org.sweble.wikitext.lazy.LazyParser;
-import org.sweble.wikitext.lazy.utils.SimpleParserConfig;
+import org.sweble.wikitext.parser.WikitextParser;
 import org.wikipedia.Wiki;
 
 import xtc.parser.ParseException;
@@ -12,6 +11,7 @@ import xtc.parser.ParseException;
 import com.maxpowa.WikiTool;
 import com.maxpowa.WikiUtil;
 import com.maxpowa.WikiUtil.FetchState;
+import com.maxpowa.helper.WikitextParserConfig;
 
 public class RunnableFetchPage implements Runnable {
 
@@ -25,7 +25,7 @@ public class RunnableFetchPage implements Runnable {
 
     public void run() {
         WikiUtil.state = FetchState.SEARCHING;
-        LazyParser lp = new LazyParser(new SimpleParserConfig());
+        WikitextParser lp = new WikitextParser(new WikitextParserConfig());
         for (Wiki wiki : WikiTool.wikis) {
             WikiUtil.state = FetchState.READING;
             try {
