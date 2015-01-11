@@ -12,7 +12,6 @@ import org.apache.logging.log4j.Logger;
 import org.lwjgl.input.Mouse;
 import org.wikipedia.Wiki;
 
-import com.maxpowa.helper.MCWikiParser;
 import com.maxpowa.threading.RunnableUpdateCheck;
 import com.maxpowa.ui.GuiWikiButton;
 import com.maxpowa.ui.GuiWikiScreen;
@@ -28,9 +27,13 @@ import cpw.mods.fml.common.gameevent.TickEvent.Phase;
 import cpw.mods.fml.common.gameevent.TickEvent.RenderTickEvent;
 import cpw.mods.fml.common.gameevent.TickEvent.Type;
 
-@Mod(modid = "WikiTool", name = "WikiTool", version = "v@VERSION@")
+@Mod(modid = WikiTool.MOD_ID, name = WikiTool.MOD_NAME, version = WikiTool.MOD_VERSION)
 public class WikiTool {
 
+    public static final String MOD_ID = "WikiTool";
+    public static final String MOD_NAME = "WikiTool";
+    public static final String MOD_VERSION = "v@VERSION@";
+    
     public static ArrayList<Wiki> wikis = new ArrayList<Wiki>();
     public static Logger log;
     private GuiWikiButton button = new GuiWikiButton(5, 2);
@@ -48,7 +51,6 @@ public class WikiTool {
         mcWiki.setUsingCompressedRequests(false);
         wikis.add(mcWiki);
         wikis.add(ftbWiki);
-        WikiUtil.registerParser(new MCWikiParser());
         log.info("Finished initializing " + wikis.size() + " wikis.");
         log.info("Loading vanilla gui wiki pages");
         BufferedReader in = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("/assets/wikitool/guiwikiequiv.txt")));
@@ -86,11 +88,7 @@ public class WikiTool {
     @SubscribeEvent
     public void RenderTickEvent(RenderTickEvent event) {
         Minecraft mc = Minecraft.getMinecraft();
-        if ((event.type == Type.RENDER || event.type == Type.CLIENT) && event.phase == Phase.END && !(mc.currentScreen instanceof GuiWikiScreen) && mc.currentScreen != null) { // &&
-                                                                                                                                                                                // mc.currentScreen
-                                                                                                                                                                                // instanceof
-                                                                                                                                                                                // GuiMainMenu)
-                                                                                                                                                                                // {
+        if ((event.type == Type.RENDER || event.type == Type.CLIENT) && event.phase == Phase.END && !(mc.currentScreen instanceof GuiWikiScreen) && mc.currentScreen != null) {
             int mouseX = Mouse.getX() * mc.currentScreen.width / mc.displayWidth;
             int mouseY = mc.currentScreen.height - Mouse.getY() * mc.currentScreen.height / mc.displayHeight - 1;
             button.drawButton(Minecraft.getMinecraft(), mouseX, mouseY);

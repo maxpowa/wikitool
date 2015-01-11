@@ -21,6 +21,7 @@ import com.google.common.collect.Sets;
 import com.maxpowa.WikiTool;
 import com.maxpowa.helper.ChatComponentPrinter;
 import com.maxpowa.helper.WikitoolFontHelper;
+import com.maxpowa.templates.KeyTemplate;
 import com.maxpowa.ui.GuiWikiScreen;
 
 import de.fau.cs.osr.ptk.common.ast.AstNode;
@@ -41,7 +42,7 @@ public class GuiWikiPage extends GuiScreen {
         IChatComponent cmp = ChatComponentPrinter.print(astNode, subCategory);
 
         // out = cmp;
-        strings = WikitoolFontHelper.listIChatComponentToWidth(cmp, mc.currentScreen.width - 50);
+        strings = WikitoolFontHelper.listIChatComponentToWidth(cmp, mc.currentScreen.width - 30);
         //strings = WikitoolFontRenderer.getInstance().listIChatComponentToWidth(cmp, 50);
     }
 
@@ -76,6 +77,8 @@ public class GuiWikiPage extends GuiScreen {
             //WikiTool.log.info("Drawing horizontal line at "+(y+4));
             //this.drawHorizontalLine(30, this.width-30, y+4, 0xFFFFFF);
             this.drawGradientRect(x, y+4, this.width-x, y+5, 0xFFFFFFFF, 0xFFFFFFFF);
+        } else if (cmp.getChatStyle() instanceof KeyTemplate) {
+            ((KeyTemplate)cmp.getChatStyle()).drawKey(x, y, mouseX, mouseY);
         } else {
             mc.fontRenderer.drawString(cmp.getFormattedText(), x, y, color, shadow);
         }

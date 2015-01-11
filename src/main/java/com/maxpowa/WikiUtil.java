@@ -1,11 +1,9 @@
 package com.maxpowa;
 
-import java.util.ArrayList;
 import java.util.TreeMap;
 
 import org.apache.logging.log4j.Logger;
 
-import com.maxpowa.helper.WikiTableParser.WikiTable;
 import com.maxpowa.threading.RunnableFetchPage;
 
 import de.fau.cs.osr.ptk.common.ast.AstNode;
@@ -14,11 +12,9 @@ public class WikiUtil {
 
     private static Thread fetchPageThread = null;
     public static FetchState state = FetchState.NONE;
-    private static ArrayList<ArticleParser> parsers = new ArrayList<ArticleParser>();
     protected static Logger log;
 
     public static TreeMap<String, AstNode> cache = new TreeMap<String, AstNode>();
-    public static TreeMap<String, WikiTable> tables = new TreeMap<String, WikiTable>();
 
     public static AstNode getPage(String page, String domain) {
         if (page.contains("#"))
@@ -33,15 +29,7 @@ public class WikiUtil {
             return null;
         }
     }
-
-    public static void registerParser(ArticleParser parser) {
-        parsers.add(parser);
-    }
-
-    public static ArrayList<ArticleParser> getParsers() {
-        return parsers;
-    }
-
+    
     public static AstNode getLastPage() {
         if (state == FetchState.DONE)
             return cache.get(cache.lastKey());

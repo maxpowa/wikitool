@@ -11,7 +11,6 @@ import xtc.parser.ParseException;
 
 import com.maxpowa.WikiTool;
 import com.maxpowa.WikiUtil;
-import com.maxpowa.WikiUtil.ArticleParser;
 import com.maxpowa.WikiUtil.FetchState;
 
 public class RunnableFetchPage implements Runnable {

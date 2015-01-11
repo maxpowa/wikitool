@@ -1,9 +1,10 @@
 package com.maxpowa.helper;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import net.minecraft.event.ClickEvent;
 import net.minecraft.event.HoverEvent;
@@ -53,6 +54,9 @@ import org.sweble.wikitext.lazy.utils.XmlAttribute;
 import org.sweble.wikitext.lazy.utils.XmlAttributeGarbage;
 import org.sweble.wikitext.lazy.utils.XmlCharRef;
 import org.sweble.wikitext.lazy.utils.XmlEntityRef;
+
+import com.maxpowa.WikiTool;
+import com.maxpowa.templates.KeyTemplate;
 
 import de.fau.cs.osr.ptk.common.AstVisitor;
 import de.fau.cs.osr.ptk.common.ast.AstNode;
@@ -161,7 +165,21 @@ public class ChatComponentPrinter extends AstVisitor {
         iterate(l);
     }
 
+    Pattern template = Pattern.compile("^\\{\\{(.+?)(?:[|](.+?))?\\}\\}$");
     public void visit(Text text) throws IOException {
+        Matcher m = template.matcher(text.getContent());
+        if (m.matches()) {
+            WikiTool.log.info("Parsing template: "+m.group(1));
+            if (m.group(1).equalsIgnoreCase("key")) {
+                ChatStyle tempStyle = currentStyle.createDeepCopy();
+                
+                currentStyle = new KeyTemplate(m.group(2));
+                print(m.group(2).replaceAll(".", " "));
+                
+                currentStyle = tempStyle;
+                return;
+            }
+        }
         print(text.getContent());
     }
 
@@ -631,20 +649,18 @@ public class ChatComponentPrinter extends AstVisitor {
         // print("<span class=\"");
         // print(this.classPrefix);
         // print("unknown-node\">");
+        
         if (this.renderTemplates) {
-            print("{");
-            print("{");
+            print("{{");
             iterate(tmpl.getName());
             iterate(tmpl.getArgs());
             print("}}");
         } else if (tmpl.getArgs().isEmpty()) {
-            print("{");
-            print("{");
+            print("{{");
             iterate(tmpl.getName());
             print("}}");
         } else {
-            print("{");
-            print("{");
+            print("{{");
             iterate(tmpl.getName());
             print("|...}}");
         }
