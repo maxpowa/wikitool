@@ -1,15 +1,14 @@
-package com.maxpowa.templates;
+package com.maxpowa.components;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.Tessellator;
-import net.minecraft.util.ChatStyle;
 import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
 
 import com.maxpowa.WikiTool;
 
-public class KeyTemplate extends ChatStyle {
+public class KeyTemplate extends IChatStyleExtra {
 
     public static final ResourceLocation BUTTONS = new ResourceLocation(WikiTool.MOD_ID+":textures/gui/buttons.png");
     
@@ -19,7 +18,7 @@ public class KeyTemplate extends ChatStyle {
         this.key_char = key_char;
     }
     
-    public void drawKey(int x, int y, int mouseX, int mouseY) {
+    public void draw(String text, int x, int y, int width, int height, int mouseX, int mouseY) {
         Minecraft mc = Minecraft.getMinecraft();
         GL11.glPushMatrix();
         mc.renderEngine.bindTexture(BUTTONS);

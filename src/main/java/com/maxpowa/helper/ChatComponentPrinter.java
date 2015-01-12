@@ -2,13 +2,11 @@ package com.maxpowa.helper;
 
 import java.util.List;
 import java.util.Stack;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import net.minecraft.event.ClickEvent;
 import net.minecraft.event.HoverEvent;
 import net.minecraft.util.ChatComponentText;
-import net.minecraft.util.ChatStyle;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.IChatComponent;
 
@@ -57,15 +55,16 @@ import org.sweble.wikitext.parser.nodes.WtXmlComment;
 import org.sweble.wikitext.parser.nodes.WtXmlElement;
 import org.sweble.wikitext.parser.nodes.WtXmlEntityRef;
 
-import com.maxpowa.WikiTool;
-import com.maxpowa.templates.KeyTemplate;
+import com.maxpowa.components.IChatStyleExtra;
+import com.maxpowa.components.IChatStyleExtra.BasicStyle;
+import com.maxpowa.components.ImageTemplate;
 
 import de.fau.cs.osr.ptk.common.AstVisitor;
 import de.fau.cs.osr.utils.StringUtils;
 
 public class ChatComponentPrinter extends AstVisitor<WtNode> {
     private IChatComponent out = new ChatComponentText("");
-    private ChatStyle currentStyle = new ChatStyle();
+    private IChatStyleExtra currentStyle = new BasicStyle();
 
     private Stack<String> indent = new Stack<String>();
 
@@ -110,7 +109,7 @@ public class ChatComponentPrinter extends AstVisitor<WtNode> {
     protected void printNewline(boolean force) {
         // we already had a newline -> collapse
         if (!needIndent || force) {
-            out.appendText("\n");
+            print("\n");
             needIndent = true;
         }
     }
@@ -140,15 +139,17 @@ public class ChatComponentPrinter extends AstVisitor<WtNode> {
     private String classPrefix;
     // private String articleTitle = "";
 
-    private boolean renderTemplates = false;
+    private boolean renderTemplates = true;
 
     public static IChatComponent print(WtNode node, String articleTitle) {
-        return print(new ChatComponentText(""), node, articleTitle);
+        ChatComponentText cmp = new ChatComponentText("");
+        cmp.setChatStyle(new BasicStyle());
+        return print(cmp, node, articleTitle);
     }
 
     public static IChatComponent print(ChatComponentText sb, WtNode node, String articleTitle) {
         new ChatComponentPrinter(sb, articleTitle).go(node);
-        sb.setChatStyle(new ChatStyle());
+        sb.setChatStyle(new BasicStyle());
         return sb;
     }
 
@@ -172,17 +173,18 @@ public class ChatComponentPrinter extends AstVisitor<WtNode> {
     }
 
     Pattern template = Pattern.compile("\\{\\{(.+?)(?:[|](.+?))?\\}\\}");
+    private String page;
 
     public void visit(WtText text) {
         print(text.getContent());
     }
 
     public void visit(WtNewline n) {
-        printNewline(true);
+        printNewline(false);
     }
 
     public void visit(WtItalics n) {
-        ChatStyle style = currentStyle.createDeepCopy();
+        IChatStyleExtra style = currentStyle.createDeepCopy();
 
         if (currentStyle.getItalic())
             currentStyle.setItalic(false);
@@ -195,7 +197,7 @@ public class ChatComponentPrinter extends AstVisitor<WtNode> {
     }
 
     public void visit(WtTicks t) {
-        ChatStyle style = currentStyle.createDeepCopy();
+        IChatStyleExtra style = currentStyle.createDeepCopy();
 
         if (currentStyle.getBold())
             currentStyle.setBold(false);
@@ -206,7 +208,7 @@ public class ChatComponentPrinter extends AstVisitor<WtNode> {
     }
 
     public void visit(WtBold n) {
-        ChatStyle style = currentStyle.createDeepCopy();
+        IChatStyleExtra style = currentStyle.createDeepCopy();
 
         if (currentStyle.getBold())
             currentStyle.setBold(false);
@@ -245,7 +247,7 @@ public class ChatComponentPrinter extends AstVisitor<WtNode> {
 
     public void visit(WtSemiPreLine line) {
         iterate(line);
-        print("\n");
+        print("**semipre");
     }
 
     public void visit(WtSection s) {
@@ -275,7 +277,7 @@ public class ChatComponentPrinter extends AstVisitor<WtNode> {
         // print("</div>");
         // printNewline(false);
 
-        ChatStyle style = currentStyle.createDeepCopy();
+        IChatStyleExtra style = currentStyle.createDeepCopy();
         currentStyle.setBold(true);
         iterate(s.getHeading());
 
@@ -377,10 +379,9 @@ public class ChatComponentPrinter extends AstVisitor<WtNode> {
     }
     
     public void visit(WtImageLink n) {
-        ChatStyle tempStyle = currentStyle.createDeepCopy();
-
-        currentStyle.setChatClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, n.getTarget().getAsString()));
-        currentStyle.setChatHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ChatComponentText("Wiki Link: " + n.getAlt())));
+        IChatStyleExtra tempStyle = currentStyle.createDeepCopy();
+        
+        currentStyle = new ImageTemplate(this.page, n.getTarget().getAsString());
         currentStyle.setUnderlined(true);
         currentStyle.setColor(EnumChatFormatting.DARK_AQUA);
 
@@ -390,7 +391,7 @@ public class ChatComponentPrinter extends AstVisitor<WtNode> {
     }
 
     public void visit(WtExternalLink link) {
-        ChatStyle tempStyle = currentStyle.createDeepCopy();
+        IChatStyleExtra tempStyle = currentStyle.createDeepCopy();
 
         StringBuilder sb = new StringBuilder(link.getTarget().getProtocol()).append(':').append(link.getTarget().getPath());
         currentStyle.setChatClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, sb.toString()));
@@ -408,7 +409,7 @@ public class ChatComponentPrinter extends AstVisitor<WtNode> {
     }
 
     public void visit(WtUrl url) {
-        ChatStyle tempStyle = currentStyle.createDeepCopy();
+        IChatStyleExtra tempStyle = currentStyle.createDeepCopy();
 
         StringBuilder sb = new StringBuilder(url.getProtocol()).append(':').append(url.getPath());
         currentStyle.setChatClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, sb.toString()));
@@ -422,7 +423,7 @@ public class ChatComponentPrinter extends AstVisitor<WtNode> {
     }
 
     public void visit(WtInternalLink n) {
-        ChatStyle tempStyle = currentStyle.createDeepCopy();
+        IChatStyleExtra tempStyle = currentStyle.createDeepCopy();
 
         currentStyle.setChatClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, makeLinkTarget(n)));
         currentStyle.setChatHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ChatComponentText("Wiki Link: " + makeLinkTitle(n))));
@@ -682,8 +683,9 @@ public class ChatComponentPrinter extends AstVisitor<WtNode> {
     // =========================================================================
 
     public ChatComponentPrinter(IChatComponent sb, String articleTitle) {
+        this.page = articleTitle;
         this.out = sb;
-        this.currentStyle = sb.getChatStyle();
+        this.currentStyle = (IChatStyleExtra) sb.getChatStyle();
         this.indent.push("");
 
         // this.articleTitle = articleTitle;

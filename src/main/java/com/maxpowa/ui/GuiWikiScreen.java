@@ -139,6 +139,7 @@ public class GuiWikiScreen extends GuiScreen {
     @Override
     public void initGui() {
         load = new GuiWikiLoading(width / 2 - 14, height / 2 - 12);
+        wikiPage = null;
     }
 
     /**

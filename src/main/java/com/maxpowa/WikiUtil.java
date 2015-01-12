@@ -1,11 +1,14 @@
 package com.maxpowa;
 
+import java.util.HashMap;
 import java.util.TreeMap;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.apache.logging.log4j.Logger;
 import org.sweble.wikitext.parser.nodes.WtNode;
 
 import com.maxpowa.threading.RunnableFetchPage;
+import com.maxpowa.threading.RunnableFetchPageImages.FetchResult;
 
 public class WikiUtil {
 
@@ -14,6 +17,7 @@ public class WikiUtil {
     protected static Logger log;
 
     public static TreeMap<String, WtNode> cache = new TreeMap<String, WtNode>();
+    public static ConcurrentHashMap<String, HashMap<String, FetchResult>> imageCache = new ConcurrentHashMap<String, HashMap<String, FetchResult>>();
 
     public static WtNode getPage(String page, String domain) {
         if (page.contains("#"))
@@ -27,6 +31,19 @@ public class WikiUtil {
         } else {
             return null;
         }
+    }
+    
+    public static FetchResult getImage(String page, String ref) {
+        ref = sanitizeFilename(ref);
+        if (imageCache.containsKey(page)) {
+            if (imageCache.get(page).containsKey(ref)) 
+                return imageCache.get(page).get(ref);
+        }
+        return null;
+    }
+    
+    public static String sanitizeFilename(String filename) {
+        return filename.replace("File:", "").replaceAll("(svg|jpg|gif|jpeg)$", ".png");
     }
     
     public static WtNode getLastPage() {

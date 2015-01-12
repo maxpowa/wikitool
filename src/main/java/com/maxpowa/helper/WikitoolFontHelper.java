@@ -26,12 +26,14 @@ public class WikitoolFontHelper {
             IChatComponent current = inputIterator.next();
             
             // Split on spaces, but retain the spaces.
-            String[] tokens = current.getUnformattedText().split("((?<= )|(?= ))");
+            String[] tokens = current.getUnformattedText().split("((?<=[\n ])|(?=[\n ]))");
             for (int i = 0; i < tokens.length; i++) {
                 String word = tokens[i];
                 
                 if (word.equalsIgnoreCase("\n")) {
-                    output.add(lastComponent.createCopy());
+                    // prevents duplicate newlines
+                    if (output.size() != 0 && !(lastComponent.getUnformattedText().trim().equalsIgnoreCase("") && output.get(output.size()-1).getUnformattedText().trim().equalsIgnoreCase("")))
+                        output.add(lastComponent.createCopy());
                     lastComponent = new ChatComponentText("");
                     currentLineWidth = 0;
                     continue;

@@ -20,9 +20,9 @@ import scala.actors.threadpool.Arrays;
 
 import com.google.common.collect.Sets;
 import com.maxpowa.WikiTool;
+import com.maxpowa.components.IChatStyleExtra;
 import com.maxpowa.helper.ChatComponentPrinter;
 import com.maxpowa.helper.WikitoolFontHelper;
-import com.maxpowa.templates.KeyTemplate;
 import com.maxpowa.ui.GuiWikiScreen;
 
 public class GuiWikiPage extends GuiScreen {
@@ -85,9 +85,9 @@ public class GuiWikiPage extends GuiScreen {
             int linkWidth = mc.fontRenderer.getStringWidth(child.getFormattedText());
             int linkX = x + mc.fontRenderer.getStringWidth(cmp.getFormattedText().substring(0, cmp.getFormattedText().indexOf(child.getFormattedText())));
             
-            if (style instanceof KeyTemplate) {
+            if (style instanceof IChatStyleExtra) {
                 WikiTool.log.info("HIT");
-                ((KeyTemplate)style).drawKey(linkX, y, mouseX, mouseY);
+                ((IChatStyleExtra)style).draw(child.getUnformattedText(), linkX, y, linkWidth, 10, mouseX, mouseY);
             }
             
             if (linkX <= mouseX && mouseX <= linkX + linkWidth && y <= mouseY && mouseY < y + 10) {

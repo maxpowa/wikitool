@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import org.sweble.wikitext.parser.WikitextParser;
+import org.sweble.wikitext.parser.WikitextPostprocessor;
 import org.wikipedia.Wiki;
 
 import xtc.parser.ParseException;
@@ -26,11 +27,15 @@ public class RunnableFetchPage implements Runnable {
     public void run() {
         WikiUtil.state = FetchState.SEARCHING;
         WikitextParser lp = new WikitextParser(new WikitextParserConfig());
+        WikitextPostprocessor wtpp = new WikitextPostprocessor(new WikitextParserConfig());
         for (Wiki wiki : WikiTool.wikis) {
             WikiUtil.state = FetchState.READING;
             try {
                 WikiTool.log.info(this.page + " found on " + wiki.getDomain());
-                WikiUtil.cache.put(wiki.getDomain() + "-" + page, lp.parseArticle(wiki.getPageText(page), page));
+                WikiUtil.state = FetchState.PARSING;
+                WikiUtil.cache.put(wiki.getDomain() + "-" + page, wtpp.postprocess(lp.parseArticle(wiki.getPageText(page), page), page));
+                Thread fetchImageThread = new Thread(new RunnableFetchPageImages(page, wiki));
+                fetchImageThread.start();
             } catch (FileNotFoundException e) {
                 WikiTool.log.info(this.page + " was not found on " + wiki.getDomain());
             } catch (IOException e) {
@@ -39,7 +44,6 @@ public class RunnableFetchPage implements Runnable {
                 e.printStackTrace();
             }
         }
-        WikiUtil.state = FetchState.PARSING;
 
         WikiUtil.resetFetch();
         WikiUtil.state = FetchState.DONE;
